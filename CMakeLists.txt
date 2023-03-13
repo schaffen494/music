@@ -17,7 +17,7 @@ link_directories(${MYSQL_CONNECTOR_C_DIR}/lib)
 set(CMAKE_C_STANDARD 11)
 set(MYSQL_LIBRARIES ${MYSQL_LIBRARY})
 
-add_executable(music main.c)
+add_executable(music src/main.c)
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${MYSQL_CONNECTOR_C_DIR}/lib/libmysql.lib)
 
