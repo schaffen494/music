@@ -1,5 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <limits.h>
+#include <sqlite3.h>
+#include "data/connectData.h"
+#include "data/directProject.h"
 #include <gtk/gtk.h>
-
 int main(int argc, char *argv[]) {
     GtkWidget *window;
     GtkWidget *button;
