@@ -1,7 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <limits.h>
+#include <sqlite3.h>
+#include "data/connectData.h"
+#include "data/directProject.h"
 #include <gtk/gtk.h>
-
 int main(int argc, char *argv[]) {
-    GtkWidget *window;
+   /* GtkWidget *window;
     GtkWidget *button;
     GtkWidget *vbox;
     GtkWidget *label;
@@ -35,5 +41,6 @@ int main(int argc, char *argv[]) {
     // Chạy vòng lặp chính của GTK
     gtk_main();
 
-    return 0;
+    return 0;*/
+
 }
