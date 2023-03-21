@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.17)
 project(music C)
 
 find_package(PkgConfig REQUIRED)
@@ -13,6 +13,6 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(music src/main.c)
+add_executable(music src/main.c src/view/sample.h)
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${SQLITE3_LIBRARY})
