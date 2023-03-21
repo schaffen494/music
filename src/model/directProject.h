@@ -4,14 +4,16 @@
 #include <string.h>
 #include <unistd.h>
 #include <limits.h>
+
+// format link
 void remove_last_n_chars(char *str, int n) {
     int len = strlen(str);
-    if (n >= len) { // Nếu n >= độ dài chuỗi, thì xóa toàn bộ chuỗi
+    if (n >= len) {
         str[0] = '\0';
         return;
     }
     int i;
-    for (i = 0; i < n; i++) { // Di chuyển con trỏ đến vị trí cuối - n
+    for (i = 0; i < n; i++) {
         str[len - n + i] = '\0';
     }
 }
