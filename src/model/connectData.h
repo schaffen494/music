@@ -20,6 +20,7 @@ int connectData(char *direct, char *notification, int *status) {
 
     strcpy(notification, "Connection is successful!");
     sqlite3_close(db);
+    printf("12");
     return 0;
 }
 
