@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <limits.h>
 
-// format link
+// định dạng đường dẫn
 void remove_last_n_chars(char *str, int n) {
     int len = strlen(str);
     if (n >= len) {
@@ -17,10 +17,14 @@ void remove_last_n_chars(char *str, int n) {
         str[len - n + i] = '\0';
     }
 }
+
+//lấy đường dẫn tuyệt đối của project C hiện tại
 void link_return(char * direct)
 {
     char link[PATH_MAX];
     getcwd(link,PATH_MAX+1);
+
+    //xoá những tự thừa
     remove_last_n_chars(link,17);
     strcpy(direct,link);
 }
