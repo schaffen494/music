@@ -1,0 +1,3 @@
+D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/CMakeFiles/music.dir
+D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir

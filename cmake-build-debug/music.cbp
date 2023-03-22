@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="music"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Dev/Workspace/C/Other/music-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="music">
+				<Option output="D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/music.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Dev/Workspace/C/Other/music-master/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLIBDEFLATE_DLL"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/gtk-3.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/pango-1.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/glib-2.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../lib/glib-2.0/include"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/harfbuzz"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/freetype2"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/libpng16"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/fribidi"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/cairo"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/pixman-1"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/gdk-pixbuf-2.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/webp"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/atk-1.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 music"/>
+					<CompileFile command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="music/fast">
+				<Option output="D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/music.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Dev/Workspace/C/Other/music-master/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLIBDEFLATE_DLL"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/gtk-3.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/pango-1.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/glib-2.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../lib/glib-2.0/include"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/harfbuzz"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/freetype2"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/libpng16"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/fribidi"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/cairo"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/pixman-1"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/gdk-pixbuf-2.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/webp"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../include/atk-1.0"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include"/>
+					<Add directory="D:/Dev/Lib/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 music/fast"/>
+					<CompileFile command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Dev/Workspace/C/Other/music-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Dev/Workspace/C/Other/music-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev/Lib/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/Dev/Workspace/C/Other/music-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Dev/Workspace/C/Other/music-master/src/main.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/Dev/Workspace/C/Other/music-master/src/view/main_menu.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/Dev/Workspace/C/Other/music-master/src/view/start_screen.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/Dev/Workspace/C/Other/music-master/src/view/ui_init.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/Dev/Workspace/C/Other/music-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
