@@ -11,6 +11,6 @@ add_definitions(${GTK3_CFLAGS_OTHER})
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(music src/main.c src/view/ui_init.h src/view/main_menu.h src/view/start_screen.h)
+add_executable(music src/main.c src/view/ui_init.h src/view/main_menu.h src/view/start_screen.h src/controller/sign_in.h src/query/db_signin.h src/controller/end.h src/controller/sign_out.h src/query/db_songs.h src/model/songs.h)
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${SQLITE3_LIBRARY})
