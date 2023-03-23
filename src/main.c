@@ -1,13 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "model/sign_in.h"
+#include "model/db_signin.h"
 #include "model/directProject.h"
 #include "view/ui_init.h"
+
+struct threeNum
+{
+    int n1, n2, n3;
+};
 
 int main(int argc, char *argv[])
 {
     char user[] = "lap",pass[]="123456",direct[] = "C:/Users/ADMIN/CLionProjects/music/database/music.db";
-    sign_in(user,pass,direct);
+    int *status;
+    db_signin(user,pass,direct,status);
 
     // Khởi tạo UI
     ui_init(argc, argv);
