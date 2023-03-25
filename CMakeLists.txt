@@ -10,8 +10,9 @@ link_directories(${GTK3_LIBRARY_DIRS})
 add_definitions(${GTK3_CFLAGS_OTHER})
 
 set(CMAKE_C_STANDARD 11)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_executable(music main.c)
+add_executable(music src/main.c src/constant.h src/view/intro.c src/view/intro.h src/components/main_menu.c src/components/main_menu.h src/view/ui_init.c src/view/ui_init.h)
 
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${SQLITE3_LIBRARY})

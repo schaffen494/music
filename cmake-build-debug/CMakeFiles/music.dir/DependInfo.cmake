@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/music/main.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/main.c.obj"
+  "D:/music/src/components/main_menu.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/components/main_menu.c.obj"
+  "D:/music/src/main.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/main.c.obj"
+  "D:/music/src/view/intro.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/view/intro.c.obj"
+  "D:/music/src/view/ui_init.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/view/ui_init.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -15,6 +18,8 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "."
+  "../"
   "C:/msys64/mingw64/include/gtk-3.0"
   "C:/msys64/mingw64/include/pango-1.0"
   "C:/msys64/mingw64/include/harfbuzz"

@@ -142,32 +142,113 @@ music/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/build
 .PHONY : music/fast
 
-main.obj: main.c.obj
+src/components/main_menu.obj: src/components/main_menu.c.obj
 
-.PHONY : main.obj
+.PHONY : src/components/main_menu.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/main.c.obj
-.PHONY : main.c.obj
+src/components/main_menu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/components/main_menu.c.obj
+.PHONY : src/components/main_menu.c.obj
 
-main.i: main.c.i
+src/components/main_menu.i: src/components/main_menu.c.i
 
-.PHONY : main.i
+.PHONY : src/components/main_menu.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/main.c.i
-.PHONY : main.c.i
+src/components/main_menu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/components/main_menu.c.i
+.PHONY : src/components/main_menu.c.i
 
-main.s: main.c.s
+src/components/main_menu.s: src/components/main_menu.c.s
 
-.PHONY : main.s
+.PHONY : src/components/main_menu.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/main.c.s
-.PHONY : main.c.s
+src/components/main_menu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/components/main_menu.c.s
+.PHONY : src/components/main_menu.c.s
+
+src/main.obj: src/main.c.obj
+
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/main.c.obj
+.PHONY : src/main.c.obj
+
+src/main.i: src/main.c.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/view/intro.obj: src/view/intro.c.obj
+
+.PHONY : src/view/intro.obj
+
+# target to build an object file
+src/view/intro.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/intro.c.obj
+.PHONY : src/view/intro.c.obj
+
+src/view/intro.i: src/view/intro.c.i
+
+.PHONY : src/view/intro.i
+
+# target to preprocess a source file
+src/view/intro.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/intro.c.i
+.PHONY : src/view/intro.c.i
+
+src/view/intro.s: src/view/intro.c.s
+
+.PHONY : src/view/intro.s
+
+# target to generate assembly for a file
+src/view/intro.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/intro.c.s
+.PHONY : src/view/intro.c.s
+
+src/view/ui_init.obj: src/view/ui_init.c.obj
+
+.PHONY : src/view/ui_init.obj
+
+# target to build an object file
+src/view/ui_init.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/ui_init.c.obj
+.PHONY : src/view/ui_init.c.obj
+
+src/view/ui_init.i: src/view/ui_init.c.i
+
+.PHONY : src/view/ui_init.i
+
+# target to preprocess a source file
+src/view/ui_init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/ui_init.c.i
+.PHONY : src/view/ui_init.c.i
+
+src/view/ui_init.s: src/view/ui_init.c.s
+
+.PHONY : src/view/ui_init.s
+
+# target to generate assembly for a file
+src/view/ui_init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/ui_init.c.s
+.PHONY : src/view/ui_init.c.s
 
 # Help Target
 help:
@@ -178,9 +259,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... music
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/components/main_menu.obj
+	@echo ... src/components/main_menu.i
+	@echo ... src/components/main_menu.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/view/intro.obj
+	@echo ... src/view/intro.i
+	@echo ... src/view/intro.s
+	@echo ... src/view/ui_init.obj
+	@echo ... src/view/ui_init.i
+	@echo ... src/view/ui_init.s
 .PHONY : help
 
 

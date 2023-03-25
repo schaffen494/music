@@ -25,6 +25,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBDEFLATE_DLL"/>
+					<Add directory="D:/music/cmake-build-debug"/>
+					<Add directory="D:/music"/>
 					<Add directory="C:/msys64/mingw64/include/gtk-3.0"/>
 					<Add directory="C:/msys64/mingw64/include/pango-1.0"/>
 					<Add directory="C:/msys64/mingw64/include/harfbuzz"/>
@@ -57,6 +59,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBDEFLATE_DLL"/>
+					<Add directory="D:/music/cmake-build-debug"/>
+					<Add directory="D:/music"/>
 					<Add directory="C:/msys64/mingw64/include/gtk-3.0"/>
 					<Add directory="C:/msys64/mingw64/include/pango-1.0"/>
 					<Add directory="C:/msys64/mingw64/include/harfbuzz"/>
@@ -102,7 +106,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/music/main.c">
+		<Unit filename="D:/music/src/components/main_menu.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/components/main_menu.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/constant.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/main.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/intro.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/intro.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/ui_init.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/ui_init.h">
 			<Option target="music"/>
 		</Unit>
 		<Unit filename="D:/music/CMakeLists.txt">
