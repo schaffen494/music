@@ -4,6 +4,7 @@
 void on_button_clicked(GtkWidget *widget, gpointer data) {
     g_print("Hello, world!\n");
     gtk_widget_destroy (widget);
+    int n;
 
 }
 int main(int argc, char *argv[]) {
