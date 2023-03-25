@@ -196,6 +196,33 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/model/songs.obj: src/model/songs.c.obj
+
+.PHONY : src/model/songs.obj
+
+# target to build an object file
+src/model/songs.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/songs.c.obj
+.PHONY : src/model/songs.c.obj
+
+src/model/songs.i: src/model/songs.c.i
+
+.PHONY : src/model/songs.i
+
+# target to preprocess a source file
+src/model/songs.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/songs.c.i
+.PHONY : src/model/songs.c.i
+
+src/model/songs.s: src/model/songs.c.s
+
+.PHONY : src/model/songs.s
+
+# target to generate assembly for a file
+src/model/songs.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/songs.c.s
+.PHONY : src/model/songs.c.s
+
 src/view/intro.obj: src/view/intro.c.obj
 
 .PHONY : src/view/intro.obj
@@ -265,6 +292,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/model/songs.obj
+	@echo ... src/model/songs.i
+	@echo ... src/model/songs.s
 	@echo ... src/view/intro.obj
 	@echo ... src/view/intro.i
 	@echo ... src/view/intro.s

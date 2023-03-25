@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "D:/music/src/components/main_menu.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/components/main_menu.c.obj"
   "D:/music/src/main.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/main.c.obj"
+  "D:/music/src/model/songs.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/model/songs.c.obj"
   "D:/music/src/view/intro.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/view/intro.c.obj"
   "D:/music/src/view/ui_init.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/view/ui_init.c.obj"
   )
