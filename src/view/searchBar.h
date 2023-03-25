@@ -6,8 +6,6 @@
 #define MUSIC_SEARCHBAR_H
 #include <gtk/gtk.h>
 
-#include <gtk/gtk.h>
-
 // Callback function for the search button
 void on_search_button_clicked(GtkButton *button, gpointer user_data) {
     // Get the text from the search entry
