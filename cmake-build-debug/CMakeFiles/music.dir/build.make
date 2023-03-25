@@ -90,19 +90,19 @@ CMakeFiles/music.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/music.dir/src/main.c.s"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\music\src\main.c -o CMakeFiles\music.dir\src\main.c.s
 
-CMakeFiles/music.dir/src/model/songs.c.obj: CMakeFiles/music.dir/flags.make
-CMakeFiles/music.dir/src/model/songs.c.obj: CMakeFiles/music.dir/includes_C.rsp
-CMakeFiles/music.dir/src/model/songs.c.obj: ../src/model/songs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\music\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/music.dir/src/model/songs.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\music.dir\src\model\songs.c.obj   -c D:\music\src\model\songs.c
+CMakeFiles/music.dir/src/view/intro.c.obj: CMakeFiles/music.dir/flags.make
+CMakeFiles/music.dir/src/view/intro.c.obj: CMakeFiles/music.dir/includes_C.rsp
+CMakeFiles/music.dir/src/view/intro.c.obj: ../src/view/intro.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\music\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/music.dir/src/view/intro.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\music.dir\src\view\intro.c.obj   -c D:\music\src\view\intro.c
 
-CMakeFiles/music.dir/src/model/songs.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/music.dir/src/model/songs.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\music\src\model\songs.c > CMakeFiles\music.dir\src\model\songs.c.i
+CMakeFiles/music.dir/src/view/intro.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/music.dir/src/view/intro.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\music\src\view\intro.c > CMakeFiles\music.dir\src\view\intro.c.i
 
-CMakeFiles/music.dir/src/model/songs.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/music.dir/src/model/songs.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\music\src\model\songs.c -o CMakeFiles\music.dir\src\model\songs.c.s
+CMakeFiles/music.dir/src/view/intro.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/music.dir/src/view/intro.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\music\src\view\intro.c -o CMakeFiles\music.dir\src\view\intro.c.s
 
 CMakeFiles/music.dir/src/components/main_menu.c.obj: CMakeFiles/music.dir/flags.make
 CMakeFiles/music.dir/src/components/main_menu.c.obj: CMakeFiles/music.dir/includes_C.rsp
@@ -118,40 +118,56 @@ CMakeFiles/music.dir/src/components/main_menu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/music.dir/src/components/main_menu.c.s"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\music\src\components\main_menu.c -o CMakeFiles\music.dir\src\components\main_menu.c.s
 
-CMakeFiles/music.dir/src/view/intro.c.obj: CMakeFiles/music.dir/flags.make
-CMakeFiles/music.dir/src/view/intro.c.obj: CMakeFiles/music.dir/includes_C.rsp
-CMakeFiles/music.dir/src/view/intro.c.obj: ../src/view/intro.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\music\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/music.dir/src/view/intro.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\music.dir\src\view\intro.c.obj   -c D:\music\src\view\intro.c
+CMakeFiles/music.dir/src/view/ui_init.c.obj: CMakeFiles/music.dir/flags.make
+CMakeFiles/music.dir/src/view/ui_init.c.obj: CMakeFiles/music.dir/includes_C.rsp
+CMakeFiles/music.dir/src/view/ui_init.c.obj: ../src/view/ui_init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\music\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/music.dir/src/view/ui_init.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\music.dir\src\view\ui_init.c.obj   -c D:\music\src\view\ui_init.c
 
-CMakeFiles/music.dir/src/view/intro.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/music.dir/src/view/intro.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\music\src\view\intro.c > CMakeFiles\music.dir\src\view\intro.c.i
+CMakeFiles/music.dir/src/view/ui_init.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/music.dir/src/view/ui_init.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\music\src\view\ui_init.c > CMakeFiles\music.dir\src\view\ui_init.c.i
 
-CMakeFiles/music.dir/src/view/intro.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/music.dir/src/view/intro.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\music\src\view\intro.c -o CMakeFiles\music.dir\src\view\intro.c.s
+CMakeFiles/music.dir/src/view/ui_init.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/music.dir/src/view/ui_init.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\music\src\view\ui_init.c -o CMakeFiles\music.dir\src\view\ui_init.c.s
+
+CMakeFiles/music.dir/src/model/songs.c.obj: CMakeFiles/music.dir/flags.make
+CMakeFiles/music.dir/src/model/songs.c.obj: CMakeFiles/music.dir/includes_C.rsp
+CMakeFiles/music.dir/src/model/songs.c.obj: ../src/model/songs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\music\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/music.dir/src/model/songs.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\music.dir\src\model\songs.c.obj   -c D:\music\src\model\songs.c
+
+CMakeFiles/music.dir/src/model/songs.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/music.dir/src/model/songs.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\music\src\model\songs.c > CMakeFiles\music.dir\src\model\songs.c.i
+
+CMakeFiles/music.dir/src/model/songs.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/music.dir/src/model/songs.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\music\src\model\songs.c -o CMakeFiles\music.dir\src\model\songs.c.s
 
 # Object files for target music
 music_OBJECTS = \
 "CMakeFiles/music.dir/src/main.c.obj" \
-"CMakeFiles/music.dir/src/model/songs.c.obj" \
+"CMakeFiles/music.dir/src/view/intro.c.obj" \
 "CMakeFiles/music.dir/src/components/main_menu.c.obj" \
-"CMakeFiles/music.dir/src/view/intro.c.obj"
+"CMakeFiles/music.dir/src/view/ui_init.c.obj" \
+"CMakeFiles/music.dir/src/model/songs.c.obj"
 
 # External object files for target music
 music_EXTERNAL_OBJECTS =
 
 music.exe: CMakeFiles/music.dir/src/main.c.obj
-music.exe: CMakeFiles/music.dir/src/model/songs.c.obj
-music.exe: CMakeFiles/music.dir/src/components/main_menu.c.obj
 music.exe: CMakeFiles/music.dir/src/view/intro.c.obj
+music.exe: CMakeFiles/music.dir/src/components/main_menu.c.obj
+music.exe: CMakeFiles/music.dir/src/view/ui_init.c.obj
+music.exe: CMakeFiles/music.dir/src/model/songs.c.obj
 music.exe: CMakeFiles/music.dir/build.make
 music.exe: C:/msys64/mingw64/lib/libsqlite3.dll.a
 music.exe: CMakeFiles/music.dir/linklibs.rsp
 music.exe: CMakeFiles/music.dir/objects1.rsp
 music.exe: CMakeFiles/music.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\music\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable music.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\music\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable music.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\music.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
