@@ -18,6 +18,7 @@ add_executable(music
         src/model/songs.c
         src/model/songs.h
         src/components/main_menu.c
+        src/view/searchBar.h
         src/components/main_menu.h src/view/intro.c src/view/intro.h)
 
 target_link_libraries(music ${GTK3_LIBRARIES})
