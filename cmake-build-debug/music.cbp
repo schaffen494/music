@@ -8,135 +8,135 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="D:/music/cmake-build-debug"/>
+				<Option working_dir="C:/Users/ASUS/CLionProjects/music/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="music">
-				<Option output="D:/music/cmake-build-debug/music.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/music/cmake-build-debug"/>
+				<Option output="C:/Users/ASUS/CLionProjects/music/cmake-build-debug/music.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ASUS/CLionProjects/music/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBDEFLATE_DLL"/>
-					<Add directory="D:/music/cmake-build-debug"/>
-					<Add directory="D:/music"/>
-					<Add directory="C:/msys64/mingw64/include/gtk-3.0"/>
-					<Add directory="C:/msys64/mingw64/include/pango-1.0"/>
-					<Add directory="C:/msys64/mingw64/include/harfbuzz"/>
-					<Add directory="C:/msys64/mingw64/include/fribidi"/>
-					<Add directory="C:/msys64/mingw64/include/atk-1.0"/>
-					<Add directory="C:/msys64/mingw64/include/cairo"/>
-					<Add directory="C:/msys64/mingw64/include/freetype2"/>
-					<Add directory="C:/msys64/mingw64/include/pixman-1"/>
-					<Add directory="C:/msys64/mingw64/include/gdk-pixbuf-2.0"/>
-					<Add directory="C:/msys64/mingw64/include/libpng16"/>
-					<Add directory="C:/msys64/mingw64/include/webp"/>
-					<Add directory="C:/msys64/mingw64/include/glib-2.0"/>
-					<Add directory="C:/msys64/mingw64/lib/glib-2.0/include"/>
-					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
-					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include"/>
-					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
+					<Add directory="C:/Users/ASUS/CLionProjects/music/cmake-build-debug"/>
+					<Add directory="C:/Users/ASUS/CLionProjects/music"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/gtk-3.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/pango-1.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/harfbuzz"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/fribidi"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/atk-1.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/cairo"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/freetype2"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/pixman-1"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/gdk-pixbuf-2.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/libpng16"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/webp"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/glib-2.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/lib/glib-2.0/include"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 music"/>
-					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 music"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="music/fast">
-				<Option output="D:/music/cmake-build-debug/music.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/music/cmake-build-debug"/>
+				<Option output="C:/Users/ASUS/CLionProjects/music/cmake-build-debug/music.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ASUS/CLionProjects/music/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBDEFLATE_DLL"/>
-					<Add directory="D:/music/cmake-build-debug"/>
-					<Add directory="D:/music"/>
-					<Add directory="C:/msys64/mingw64/include/gtk-3.0"/>
-					<Add directory="C:/msys64/mingw64/include/pango-1.0"/>
-					<Add directory="C:/msys64/mingw64/include/harfbuzz"/>
-					<Add directory="C:/msys64/mingw64/include/fribidi"/>
-					<Add directory="C:/msys64/mingw64/include/atk-1.0"/>
-					<Add directory="C:/msys64/mingw64/include/cairo"/>
-					<Add directory="C:/msys64/mingw64/include/freetype2"/>
-					<Add directory="C:/msys64/mingw64/include/pixman-1"/>
-					<Add directory="C:/msys64/mingw64/include/gdk-pixbuf-2.0"/>
-					<Add directory="C:/msys64/mingw64/include/libpng16"/>
-					<Add directory="C:/msys64/mingw64/include/webp"/>
-					<Add directory="C:/msys64/mingw64/include/glib-2.0"/>
-					<Add directory="C:/msys64/mingw64/lib/glib-2.0/include"/>
-					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
-					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include"/>
-					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
+					<Add directory="C:/Users/ASUS/CLionProjects/music/cmake-build-debug"/>
+					<Add directory="C:/Users/ASUS/CLionProjects/music"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/gtk-3.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/pango-1.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/harfbuzz"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/fribidi"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/atk-1.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/cairo"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/freetype2"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/pixman-1"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/gdk-pixbuf-2.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/libpng16"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/webp"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/glib-2.0"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/lib/glib-2.0/include"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include"/>
+					<Add directory="C:/Users/ASUS/Downloads/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 music/fast"/>
-					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 music/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="D:/music/cmake-build-debug"/>
+				<Option working_dir="C:/Users/ASUS/CLionProjects/music/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="D:/music/cmake-build-debug"/>
+				<Option working_dir="C:/Users/ASUS/CLionProjects/music/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/CODEBL~1/MinGW/bin/mingw32-make.exe -f &quot;D:/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/CLionProjects/music/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/music/src/components/main_menu.c">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/components/main_menu.c">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/components/main_menu.h">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/components/main_menu.h">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/constant.h">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/constant.h">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/main.c">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/main.c">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/model/songs.c">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/model/songs.c">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/model/songs.h">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/model/songs.h">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/view/intro.c">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/view/intro.c">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/view/intro.h">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/view/intro.h">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/view/ui_init.c">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/view/ui_init.c">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/view/ui_init.h">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/src/view/ui_init.h">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/CMakeLists.txt">
+		<Unit filename="C:/Users/ASUS/CLionProjects/music/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

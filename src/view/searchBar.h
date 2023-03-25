@@ -18,7 +18,7 @@ void on_search_button_clicked(GtkButton *button, gpointer user_data) {
     // and display the results in your application.
 }
 
-int main(int argc, char *argv[]) {
+int searchBar(int argc, char *argv[]) {
     // Initialize GTK
     gtk_init(&argc, &argv);
 

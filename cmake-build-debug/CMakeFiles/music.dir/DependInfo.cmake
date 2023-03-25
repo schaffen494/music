@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/music/src/components/main_menu.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/components/main_menu.c.obj"
-  "D:/music/src/main.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/main.c.obj"
-  "D:/music/src/model/songs.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/model/songs.c.obj"
-  "D:/music/src/view/intro.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/view/intro.c.obj"
-  "D:/music/src/view/ui_init.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/view/ui_init.c.obj"
+  "C:/Users/ASUS/CLionProjects/music/src/components/main_menu.c" "C:/Users/ASUS/CLionProjects/music/cmake-build-debug/CMakeFiles/music.dir/src/components/main_menu.c.obj"
+  "C:/Users/ASUS/CLionProjects/music/src/main.c" "C:/Users/ASUS/CLionProjects/music/cmake-build-debug/CMakeFiles/music.dir/src/main.c.obj"
+  "C:/Users/ASUS/CLionProjects/music/src/model/songs.c" "C:/Users/ASUS/CLionProjects/music/cmake-build-debug/CMakeFiles/music.dir/src/model/songs.c.obj"
+  "C:/Users/ASUS/CLionProjects/music/src/view/intro.c" "C:/Users/ASUS/CLionProjects/music/cmake-build-debug/CMakeFiles/music.dir/src/view/intro.c.obj"
+  "C:/Users/ASUS/CLionProjects/music/src/view/ui_init.c" "C:/Users/ASUS/CLionProjects/music/cmake-build-debug/CMakeFiles/music.dir/src/view/ui_init.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -21,19 +21,19 @@ set(CMAKE_TARGET_DEFINITIONS_C
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "."
   "../"
-  "C:/msys64/mingw64/include/gtk-3.0"
-  "C:/msys64/mingw64/include/pango-1.0"
-  "C:/msys64/mingw64/include/harfbuzz"
-  "C:/msys64/mingw64/include/fribidi"
-  "C:/msys64/mingw64/include/atk-1.0"
-  "C:/msys64/mingw64/include/cairo"
-  "C:/msys64/mingw64/include/freetype2"
-  "C:/msys64/mingw64/include/pixman-1"
-  "C:/msys64/mingw64/include/gdk-pixbuf-2.0"
-  "C:/msys64/mingw64/include/libpng16"
-  "C:/msys64/mingw64/include/webp"
-  "C:/msys64/mingw64/include/glib-2.0"
-  "C:/msys64/mingw64/lib/glib-2.0/include"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/gtk-3.0"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/pango-1.0"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/harfbuzz"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/fribidi"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/atk-1.0"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/cairo"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/freetype2"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/pixman-1"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/gdk-pixbuf-2.0"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/libpng16"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/webp"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/include/glib-2.0"
+  "C:/Users/ASUS/Downloads/msys64/msys64/mingw64/lib/glib-2.0/include"
   )
 
 # Targets to which this target links.
