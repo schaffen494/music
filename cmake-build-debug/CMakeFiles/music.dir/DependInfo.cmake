@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "D:/music/src/main.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/main.c.obj"
   "D:/music/src/model/songs.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/model/songs.c.obj"
   "D:/music/src/view/intro.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/view/intro.c.obj"
-  "D:/music/src/view/ui_init.c" "D:/music/cmake-build-debug/CMakeFiles/music.dir/src/view/ui_init.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

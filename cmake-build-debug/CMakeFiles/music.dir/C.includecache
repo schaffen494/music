@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+../src/components/main_menu.h
+gtk/gtk.h
+-
+
 C:/msys64/mingw64/include/atk-1.0/atk/atk-autocleanups.h
 
 C:/msys64/mingw64/include/atk-1.0/atk/atk-enum-types.h
@@ -4828,9 +4832,13 @@ limits.h
 float.h
 -
 
-D:/music/main.c
-stdio.h
--
+D:/music/src/constant.h
+
+D:/music/src/main.c
 gtk/gtk.h
 -
+constant.h
+D:/music/src/constant.h
+src/components/main_menu.h
+D:/music/src/src/components/main_menu.h
 

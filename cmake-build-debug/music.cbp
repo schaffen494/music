@@ -130,12 +130,6 @@
 		<Unit filename="D:/music/src/view/intro.h">
 			<Option target="music"/>
 		</Unit>
-		<Unit filename="D:/music/src/view/ui_init.c">
-			<Option target="music"/>
-		</Unit>
-		<Unit filename="D:/music/src/view/ui_init.h">
-			<Option target="music"/>
-		</Unit>
 		<Unit filename="D:/music/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

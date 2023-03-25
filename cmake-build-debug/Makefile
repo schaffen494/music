@@ -250,33 +250,6 @@ src/view/intro.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/intro.c.s
 .PHONY : src/view/intro.c.s
 
-src/view/ui_init.obj: src/view/ui_init.c.obj
-
-.PHONY : src/view/ui_init.obj
-
-# target to build an object file
-src/view/ui_init.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/ui_init.c.obj
-.PHONY : src/view/ui_init.c.obj
-
-src/view/ui_init.i: src/view/ui_init.c.i
-
-.PHONY : src/view/ui_init.i
-
-# target to preprocess a source file
-src/view/ui_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/ui_init.c.i
-.PHONY : src/view/ui_init.c.i
-
-src/view/ui_init.s: src/view/ui_init.c.s
-
-.PHONY : src/view/ui_init.s
-
-# target to generate assembly for a file
-src/view/ui_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/ui_init.c.s
-.PHONY : src/view/ui_init.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -298,9 +271,6 @@ help:
 	@echo ... src/view/intro.obj
 	@echo ... src/view/intro.i
 	@echo ... src/view/intro.s
-	@echo ... src/view/ui_init.obj
-	@echo ... src/view/ui_init.i
-	@echo ... src/view/ui_init.s
 .PHONY : help
 
 
