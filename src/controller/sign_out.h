@@ -1,4 +1,0 @@
-#ifndef MUSIC_SIGN_OUT_H
-#define MUSIC_SIGN_OUT_H
-
-#endif //MUSIC_SIGN_OUT_H
