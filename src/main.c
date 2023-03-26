@@ -1,8 +1,9 @@
 #include <gtk/gtk.h>
-#include "view/intro.h"
+#include "view/sign_in.h"
 
 int main(int argc, char *argv[]) {
+    // Khởi tạo GTK
     gtk_init(&argc, &argv);
-    intro_show();
+    sign_in();
     return 0;
 }

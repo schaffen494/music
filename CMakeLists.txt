@@ -18,8 +18,12 @@ add_executable(music
         src/model/songs.c
         src/model/songs.h
         src/components/main_menu.c
-        src/view/searchBar.h
-        src/components/main_menu.h src/view/intro.c src/view/intro.h)
+        src/components/searchBar.h
+        src/components/main_menu.h
+        src/view/intro.c
+        src/view/intro.h
+        src/view/sign_in.c
+        src/view/sign_in.h src/model/user.c src/model/user.h)
 
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${SQLITE3_LIBRARY})
