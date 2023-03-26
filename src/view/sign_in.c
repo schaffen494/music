@@ -1,15 +1,10 @@
 //
 // Created by ADMIN on 3/26/2023.
 //
-
 #include "sign_in.h"
 GtkWidget *username_entry;
 GtkWidget *password_entry;
 gboolean authenticate_user(const char *username, const char *password) {
-    // Đây là hàm kiểm tra đăng nhập của bạn.
-    // Trong ví dụ này, chúng ta sẽ giả sử tất cả các tài khoản đều có mật khẩu là "password"
-    // và chỉ có tài khoản "user" mới được phép đăng nhập.
-
     if (strcmp(username, "lap") == 0 && strcmp(password, "123") == 0) {
         return TRUE;
     } else {

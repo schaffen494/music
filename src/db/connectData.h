@@ -1,0 +1,8 @@
+//
+// Created by ADMIN on 3/26/2023.
+//
+
+#ifndef MUSIC_CONNECTDATA_H
+#define MUSIC_CONNECTDATA_H
+
+#endif //MUSIC_CONNECTDATA_H
