@@ -32,6 +32,10 @@ void intro_show() {
     // Thêm GtkImage vào window
     gtk_container_add(GTK_CONTAINER(window), image);
 
+    GtkCssProvider *css_provider = gtk_css_provider_new();
+    gtk_css_provider_load_from_data(css_provider, "window { border-radius: 10px; }", -1, NULL);
+    GtkStyleContext *context = gtk_widget_get_style_context(GTK_WIDGET(window));
+    gtk_style_context_add_provider(context, GTK_STYLE_PROVIDER(css_provider), GTK_STYLE_PROVIDER_PRIORITY_USER);
     // Hiển thị cửa sổ
     gtk_widget_show_all(window);
 
