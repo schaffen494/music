@@ -4,6 +4,7 @@
 GtkWidget *username_entry;
 GtkWidget *password_entry;
 GtkWidget *sign_in_window;
+int status_signin =0;
 gboolean authenticate_user(const char *username, const char *password) {
 
     if (check_Signin(username,password) == LOGIN_OK) {
@@ -13,7 +14,7 @@ gboolean authenticate_user(const char *username, const char *password) {
     }
 }
 
-void login_clicked(GtkWidget *widget, gpointer data) {
+int login_clicked(GtkWidget *widget, gpointer data) {
     const char *username = gtk_entry_get_text(GTK_ENTRY(username_entry));
     const char *password = gtk_entry_get_text(GTK_ENTRY(password_entry));
     GtkWidget *dialog;
@@ -38,7 +39,10 @@ void login_clicked(GtkWidget *widget, gpointer data) {
         gtk_window_set_decorated(GTK_WINDOW(dialog), FALSE);
         gtk_window_set_position(GTK_WINDOW(dialog), GTK_WIN_POS_CENTER);
         gtk_dialog_run(GTK_DIALOG(dialog));
-        g_timeout_add_seconds(1, (GSourceFunc)gtk_widget_destroy, dialog);
+        g_timeout_add_seconds(0, (GSourceFunc)gtk_widget_destroy, dialog);
+        gtk_entry_set_text(username_entry, "");
+        gtk_entry_set_text(password_entry, "");
+        return 1;
     }
 
 
