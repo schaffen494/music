@@ -31,7 +31,12 @@ add_executable(music
         src/view/sign_in.h
         src/model/user.c
         src/model/user.h
-        src/db/connectData.c src/db/connectData.h src/view/sign_up.c src/view/sign_up.h src/view/main_board.c src/view/main_board.h)
+        src/db/connectData.c
+        src/db/connectData.h
+        src/view/sign_up.c
+        src/view/sign_up.h
+        src/view/main_board.c
+        src/view/main_board.h)
 
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${SQLITE3_LIBRARY})
