@@ -1,10 +1,14 @@
 #include <gtk/gtk.h>
-#include "view/sign_in.h"
+#include "db/connectData.h"
 #include "view/intro.h"
-#include "view/main_board.h"
+
 int main(int argc, char *argv[]) {
     // Khởi tạo GTK
-    gtk_init(&argc, &argv);
-    intro_show();
+    //gtk_init(&argc, &argv);
+
+    if( set_account("miloo","12345")==SIGNUP_FAIL)
+    {
+        printf("Account existed!");
+    }
     return 0;
 }

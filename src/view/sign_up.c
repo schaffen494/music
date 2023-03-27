@@ -3,3 +3,8 @@
 //
 
 #include "sign_up.h"
+
+void signup_show()
+{
+
+}
