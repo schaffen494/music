@@ -5,6 +5,6 @@
 int main(int argc, char *argv[]) {
     // Khởi tạo GTK
     gtk_init(&argc, &argv);
-    main_board_show();
+    intro_show();
     return 0;
 }

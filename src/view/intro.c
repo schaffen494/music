@@ -7,6 +7,7 @@
 void intro_show() {
     // Tạo một cửa sổ mới
     GtkWidget *intro_wid = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+    gtk_widget_set_size_request(intro_wid, 1500, 800);
     gtk_window_set_decorated(GTK_WINDOW(intro_wid), FALSE);
 
     // Đặt tiêu đề cho cửa sổ
@@ -16,8 +17,7 @@ void intro_show() {
     gtk_widget_override_background_color(intro_wid, GTK_STATE_FLAG_NORMAL, &color);
     // Lấy kích thước màn hình
     GdkScreen *screen = gdk_screen_get_default();
-    gint width = gdk_screen_get_width(screen);
-    gint height = gdk_screen_get_height(screen);
+
 
     gtk_window_set_position(GTK_WINDOW(intro_wid), GTK_WIN_POS_CENTER_ALWAYS);
 
