@@ -1,23 +1,21 @@
-//
-// Created by ASUS on 3/22/2023.
-//
-
-#ifndef MUSIC_SEARCHBAR_H
-#define MUSIC_SEARCHBAR_H
 #include <gtk/gtk.h>
 
-// Callback function for the search button
-void on_search_button_clicked(GtkButton *button, gpointer user_data) {
-    // Get the text from the search entry
-    GtkEntry *search_entry = (GtkEntry *) user_data;
-    const gchar *search_text = gtk_entry_get_text(search_entry);
-
-    // TODO: Use the search_text to search for music in your project
-    // and display the results in your application.
+static void search_button_clicked(GtkButton *button, gpointer user_data) {
+    GtkEntry *search_entry = GTK_ENTRY(user_data);
+    const char *search_text = gtk_entry_get_text(search_entry);
+    // Perform search with the search_text
+    g_print("%s\n", search_text);
 }
 
-int searchBar(int argc, char *argv[]) {
-    // Initialize GTK
+static void on_search_activate(GtkEntry *entry, gpointer user_data) {
+    const gchar *text = gtk_entry_get_text(entry);
+    // Perform search operation using the text entered in the search entry
+    g_print("%s \n", text);
+}
+
+// Callback function for the search button
+
+int main(int argc, char *argv[]) {
     gtk_init(&argc, &argv);
 
     // Create a new window
@@ -28,16 +26,21 @@ int searchBar(int argc, char *argv[]) {
 
     // Create a search entry
     GtkWidget *search_entry = gtk_entry_new();
-    g_signal_connect(search_entry, "activate", G_CALLBACK(on_search_button_clicked), (gpointer) search_entry);
+    g_signal_connect(search_entry, "activate", G_CALLBACK(on_search_activate), NULL);
 
-    // Create a search button
-    GtkWidget *search_button = gtk_button_new_with_label("Search");
-    g_signal_connect(search_button, "clicked", G_CALLBACK(on_search_button_clicked), (gpointer) search_entry);
+    // Create the search button
+    GtkWidget *search_button = gtk_button_new();
+    gtk_widget_set_halign(search_button, GTK_ALIGN_CENTER);
+    gtk_button_set_always_show_image(GTK_BUTTON(search_button), TRUE);
+    gtk_button_set_image(GTK_BUTTON(search_button), gtk_image_new_from_icon_name("edit-find-symbolic", GTK_ICON_SIZE_BUTTON));
+    g_signal_connect(search_button, "clicked", G_CALLBACK(search_button_clicked), search_entry);
 
     // Create a horizontal box to hold the search entry and search button
     GtkWidget *hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 5);
     gtk_box_pack_start(GTK_BOX(hbox), search_entry, TRUE, TRUE, 0);
     gtk_box_pack_start(GTK_BOX(hbox), search_button, FALSE, FALSE, 0);
+    gtk_box_set_center_widget(GTK_BOX(hbox), search_entry);
+    gtk_box_set_spacing(GTK_BOX(hbox), 10);
 
     // Create a vertical box to hold the search box and other widgets
     GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
@@ -46,39 +49,15 @@ int searchBar(int argc, char *argv[]) {
     // Add the vbox to the window and show everything
     gtk_container_add(GTK_CONTAINER(window), vbox);
 
+    // Load the CSS
     GtkCssProvider *provider = gtk_css_provider_new();
-    gtk_css_provider_load_from_data(provider,
-                                    "entry {\n"
-                                    "    background-color: #2c3e50;\n"
-                                    "    border: none;\n"
-                                    "    color: #fff;\n"
-                                    "    padding: 8px 12px;\n"
-                                    "    border-radius: 20px;\n"
-                                    "    font-size: 14px;\n"
-                                    "    font-weight: 400;\n"
-                                    "}\n"
-                                    "\n"
-                                    "entry:focus {\n"
-                                    "    outline: none;\n"
-                                    "}\n"
-                                    "\n"
-                                    "button {\n"
-                                    "    background-color: #2980b9;\n"
-                                    "    color: #fff;\n"
-                                    "    padding: 8px 20px;\n"
-                                    "    border: none;\n"
-                                    "    border-radius: 20px;\n"
-                                    "    font-size: 14px;\n"
-                                    "    font-weight: 400;\n"
-                                    "    cursor: pointer;\n"
-                                    "}\n"
-                                    "\n"
-                                    "button:hover {\n"
-                                    "    background-color: #1a5276;\n"
-                                    "}\n"
-            , -1, NULL);
+    GError *error = NULL;
 
-    // Apply the CSS to the search entry and search button
+    if (!gtk_css_provider_load_from_path(provider, "C:\\Users\\ASUS\\CLionProjects\\music\\src\\components\\searchBar.css", &error)) {
+        g_warning("Failed to load CSS file: %s", error->message);
+        g_clear_error(&error);
+    }
+
     GtkStyleContext *context_entry = gtk_widget_get_style_context(search_entry);
     gtk_style_context_add_provider(context_entry, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 
@@ -92,6 +71,3 @@ int searchBar(int argc, char *argv[]) {
 
     return 0;
 }
-
-
-#endif //MUSIC_SEARCHBAR_H
