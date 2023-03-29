@@ -14,8 +14,5 @@ typedef struct {
     char album[50];
 } Song;
 
-int add_song(sqlite3 *db, Song *song);
-
-int get_song();
 
 #endif //MUSIC_SONGS_H

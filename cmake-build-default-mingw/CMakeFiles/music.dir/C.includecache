@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+../src/db/connectData.h
+sqlite3.h
+-
+string.h
+-
+stdio.h
+-
+
+../src/view/main_board.h
+gtk/gtk.h
+-
+
 C:/msys64/mingw64/include/atk-1.0/atk/atk-autocleanups.h
 
 C:/msys64/mingw64/include/atk-1.0/atk/atk-enum-types.h
@@ -4828,21 +4840,15 @@ limits.h
 float.h
 -
 
-D:/music/src/db/connectData.h
-sqlite3.h
--
-string.h
--
-stdio.h
--
+D:/music/src/view/sign_in.c
+sign_in.h
+D:/music/src/view/sign_in.h
+src/db/connectData.h
+D:/music/src/view/src/db/connectData.h
+src/view/main_board.h
+D:/music/src/view/src/view/main_board.h
 
-D:/music/src/main.c
+D:/music/src/view/sign_in.h
 gtk/gtk.h
 -
-db/connectData.h
-D:/music/src/db/connectData.h
-view/intro.h
-D:/music/src/view/intro.h
-
-D:/music/src/view/intro.h
 

@@ -4,10 +4,10 @@
 GtkWidget *username_entry;
 GtkWidget *password_entry;
 GtkWidget *sign_in_window;
-int status_signin =0;
+
 gboolean authenticate_user(const char *username, const char *password) {
 
-    if (check_Signin(username,password) == LOGIN_OK) {
+    if (check_Sign_in(username,password) == LOGIN_OK) {
         return TRUE;
     } else {
         return FALSE;
@@ -55,8 +55,13 @@ void sign_in()
     sign_in_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(GTK_WINDOW(sign_in_window), "Đăng nhập");
     gtk_container_set_border_width(GTK_CONTAINER(sign_in_window), 10);
-    gtk_widget_set_size_request(sign_in_window, 1500, 800);
+    gtk_widget_set_size_request(sign_in_window, 550, 800);
     g_signal_connect(sign_in_window, "destroy", G_CALLBACK(exit), NULL);
+
+    GdkRGBA color;
+    gdk_rgba_parse(&color, "#0a0931");
+    gtk_widget_override_background_color(sign_in_window, GTK_STATE_FLAG_NORMAL, &color);
+
 
     // Tạo box chứa các widget
     GtkWidget *box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
