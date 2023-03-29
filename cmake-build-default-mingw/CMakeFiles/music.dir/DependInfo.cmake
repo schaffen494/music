@@ -5,14 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "D:/music/src/components/main_menu.c" "D:/music/cmake-build-default-mingw/CMakeFiles/music.dir/src/components/main_menu.c.obj"
-  "D:/music/src/db/connectData.c" "D:/music/cmake-build-default-mingw/CMakeFiles/music.dir/src/db/connectData.c.obj"
   "D:/music/src/main.c" "D:/music/cmake-build-default-mingw/CMakeFiles/music.dir/src/main.c.obj"
   "D:/music/src/model/songs.c" "D:/music/cmake-build-default-mingw/CMakeFiles/music.dir/src/model/songs.c.obj"
-  "D:/music/src/model/user.c" "D:/music/cmake-build-default-mingw/CMakeFiles/music.dir/src/model/user.c.obj"
   "D:/music/src/view/intro.c" "D:/music/cmake-build-default-mingw/CMakeFiles/music.dir/src/view/intro.c.obj"
-  "D:/music/src/view/main_board.c" "D:/music/cmake-build-default-mingw/CMakeFiles/music.dir/src/view/main_board.c.obj"
-  "D:/music/src/view/sign_in.c" "D:/music/cmake-build-default-mingw/CMakeFiles/music.dir/src/view/sign_in.c.obj"
-  "D:/music/src/view/sign_up.c" "D:/music/cmake-build-default-mingw/CMakeFiles/music.dir/src/view/sign_up.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

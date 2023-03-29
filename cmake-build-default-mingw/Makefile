@@ -169,33 +169,6 @@ src/components/main_menu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/components/main_menu.c.s
 .PHONY : src/components/main_menu.c.s
 
-src/db/connectData.obj: src/db/connectData.c.obj
-
-.PHONY : src/db/connectData.obj
-
-# target to build an object file
-src/db/connectData.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/db/connectData.c.obj
-.PHONY : src/db/connectData.c.obj
-
-src/db/connectData.i: src/db/connectData.c.i
-
-.PHONY : src/db/connectData.i
-
-# target to preprocess a source file
-src/db/connectData.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/db/connectData.c.i
-.PHONY : src/db/connectData.c.i
-
-src/db/connectData.s: src/db/connectData.c.s
-
-.PHONY : src/db/connectData.s
-
-# target to generate assembly for a file
-src/db/connectData.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/db/connectData.c.s
-.PHONY : src/db/connectData.c.s
-
 src/main.obj: src/main.c.obj
 
 .PHONY : src/main.obj
@@ -250,33 +223,6 @@ src/model/songs.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/songs.c.s
 .PHONY : src/model/songs.c.s
 
-src/model/user.obj: src/model/user.c.obj
-
-.PHONY : src/model/user.obj
-
-# target to build an object file
-src/model/user.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/user.c.obj
-.PHONY : src/model/user.c.obj
-
-src/model/user.i: src/model/user.c.i
-
-.PHONY : src/model/user.i
-
-# target to preprocess a source file
-src/model/user.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/user.c.i
-.PHONY : src/model/user.c.i
-
-src/model/user.s: src/model/user.c.s
-
-.PHONY : src/model/user.s
-
-# target to generate assembly for a file
-src/model/user.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/user.c.s
-.PHONY : src/model/user.c.s
-
 src/view/intro.obj: src/view/intro.c.obj
 
 .PHONY : src/view/intro.obj
@@ -304,87 +250,6 @@ src/view/intro.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/intro.c.s
 .PHONY : src/view/intro.c.s
 
-src/view/main_board.obj: src/view/main_board.c.obj
-
-.PHONY : src/view/main_board.obj
-
-# target to build an object file
-src/view/main_board.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/main_board.c.obj
-.PHONY : src/view/main_board.c.obj
-
-src/view/main_board.i: src/view/main_board.c.i
-
-.PHONY : src/view/main_board.i
-
-# target to preprocess a source file
-src/view/main_board.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/main_board.c.i
-.PHONY : src/view/main_board.c.i
-
-src/view/main_board.s: src/view/main_board.c.s
-
-.PHONY : src/view/main_board.s
-
-# target to generate assembly for a file
-src/view/main_board.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/main_board.c.s
-.PHONY : src/view/main_board.c.s
-
-src/view/sign_in.obj: src/view/sign_in.c.obj
-
-.PHONY : src/view/sign_in.obj
-
-# target to build an object file
-src/view/sign_in.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/sign_in.c.obj
-.PHONY : src/view/sign_in.c.obj
-
-src/view/sign_in.i: src/view/sign_in.c.i
-
-.PHONY : src/view/sign_in.i
-
-# target to preprocess a source file
-src/view/sign_in.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/sign_in.c.i
-.PHONY : src/view/sign_in.c.i
-
-src/view/sign_in.s: src/view/sign_in.c.s
-
-.PHONY : src/view/sign_in.s
-
-# target to generate assembly for a file
-src/view/sign_in.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/sign_in.c.s
-.PHONY : src/view/sign_in.c.s
-
-src/view/sign_up.obj: src/view/sign_up.c.obj
-
-.PHONY : src/view/sign_up.obj
-
-# target to build an object file
-src/view/sign_up.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/sign_up.c.obj
-.PHONY : src/view/sign_up.c.obj
-
-src/view/sign_up.i: src/view/sign_up.c.i
-
-.PHONY : src/view/sign_up.i
-
-# target to preprocess a source file
-src/view/sign_up.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/sign_up.c.i
-.PHONY : src/view/sign_up.c.i
-
-src/view/sign_up.s: src/view/sign_up.c.s
-
-.PHONY : src/view/sign_up.s
-
-# target to generate assembly for a file
-src/view/sign_up.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/view/sign_up.c.s
-.PHONY : src/view/sign_up.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -397,30 +262,15 @@ help:
 	@echo ... src/components/main_menu.obj
 	@echo ... src/components/main_menu.i
 	@echo ... src/components/main_menu.s
-	@echo ... src/db/connectData.obj
-	@echo ... src/db/connectData.i
-	@echo ... src/db/connectData.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
 	@echo ... src/model/songs.obj
 	@echo ... src/model/songs.i
 	@echo ... src/model/songs.s
-	@echo ... src/model/user.obj
-	@echo ... src/model/user.i
-	@echo ... src/model/user.s
 	@echo ... src/view/intro.obj
 	@echo ... src/view/intro.i
 	@echo ... src/view/intro.s
-	@echo ... src/view/main_board.obj
-	@echo ... src/view/main_board.i
-	@echo ... src/view/main_board.s
-	@echo ... src/view/sign_in.obj
-	@echo ... src/view/sign_in.i
-	@echo ... src/view/sign_in.s
-	@echo ... src/view/sign_up.obj
-	@echo ... src/view/sign_up.i
-	@echo ... src/view/sign_up.s
 .PHONY : help
 
 
