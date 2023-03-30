@@ -112,10 +112,19 @@
 		<Unit filename="D:/music/src/components/main_menu.h">
 			<Option target="music"/>
 		</Unit>
+		<Unit filename="D:/music/src/components/searchBar.css">
+			<Option target="music"/>
+		</Unit>
 		<Unit filename="D:/music/src/components/searchBar.h">
 			<Option target="music"/>
 		</Unit>
 		<Unit filename="D:/music/src/constant.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/db/connectData.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/db/connectData.h">
 			<Option target="music"/>
 		</Unit>
 		<Unit filename="D:/music/src/main.c">
@@ -127,10 +136,34 @@
 		<Unit filename="D:/music/src/model/songs.h">
 			<Option target="music"/>
 		</Unit>
+		<Unit filename="D:/music/src/model/user.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/model/user.h">
+			<Option target="music"/>
+		</Unit>
 		<Unit filename="D:/music/src/view/intro.c">
 			<Option target="music"/>
 		</Unit>
 		<Unit filename="D:/music/src/view/intro.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/main_board.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/main_board.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/sign_in.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/sign_in.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/sign_up.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/view/sign_up.h">
 			<Option target="music"/>
 		</Unit>
 		<Unit filename="D:/music/CMakeLists.txt">
