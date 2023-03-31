@@ -223,6 +223,60 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/model/album.obj: src/model/album.c.obj
+
+.PHONY : src/model/album.obj
+
+# target to build an object file
+src/model/album.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/album.c.obj
+.PHONY : src/model/album.c.obj
+
+src/model/album.i: src/model/album.c.i
+
+.PHONY : src/model/album.i
+
+# target to preprocess a source file
+src/model/album.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/album.c.i
+.PHONY : src/model/album.c.i
+
+src/model/album.s: src/model/album.c.s
+
+.PHONY : src/model/album.s
+
+# target to generate assembly for a file
+src/model/album.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/album.c.s
+.PHONY : src/model/album.c.s
+
+src/model/playlist.obj: src/model/playlist.c.obj
+
+.PHONY : src/model/playlist.obj
+
+# target to build an object file
+src/model/playlist.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/playlist.c.obj
+.PHONY : src/model/playlist.c.obj
+
+src/model/playlist.i: src/model/playlist.c.i
+
+.PHONY : src/model/playlist.i
+
+# target to preprocess a source file
+src/model/playlist.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/playlist.c.i
+.PHONY : src/model/playlist.c.i
+
+src/model/playlist.s: src/model/playlist.c.s
+
+.PHONY : src/model/playlist.s
+
+# target to generate assembly for a file
+src/model/playlist.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\music.dir\build.make CMakeFiles/music.dir/src/model/playlist.c.s
+.PHONY : src/model/playlist.c.s
+
 src/model/songs.obj: src/model/songs.c.obj
 
 .PHONY : src/model/songs.obj
@@ -403,6 +457,12 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/model/album.obj
+	@echo ... src/model/album.i
+	@echo ... src/model/album.s
+	@echo ... src/model/playlist.obj
+	@echo ... src/model/playlist.i
+	@echo ... src/model/playlist.s
 	@echo ... src/model/songs.obj
 	@echo ... src/model/songs.i
 	@echo ... src/model/songs.s

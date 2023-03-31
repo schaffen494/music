@@ -1,7 +1,3 @@
-//
-// Created by ADMIN on 3/25/2023.
-//
-
 #ifndef MUSIC_SONGS_H
 #define MUSIC_SONGS_H
 #include<stdio.h>

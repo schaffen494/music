@@ -130,6 +130,18 @@
 		<Unit filename="D:/music/src/main.c">
 			<Option target="music"/>
 		</Unit>
+		<Unit filename="D:/music/src/model/album.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/model/album.h">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/model/playlist.c">
+			<Option target="music"/>
+		</Unit>
+		<Unit filename="D:/music/src/model/playlist.h">
+			<Option target="music"/>
+		</Unit>
 		<Unit filename="D:/music/src/model/songs.c">
 			<Option target="music"/>
 		</Unit>
