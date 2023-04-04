@@ -1,3 +1,0 @@
-D:/music/cmake-build-default-mingw/CMakeFiles/music.dir
-D:/music/cmake-build-default-mingw/CMakeFiles/edit_cache.dir
-D:/music/cmake-build-default-mingw/CMakeFiles/rebuild_cache.dir

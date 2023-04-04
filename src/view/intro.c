@@ -19,7 +19,6 @@ void intro_show() {
 
 
     gtk_window_set_position(GTK_WINDOW(intro_window), GTK_WIN_POS_CENTER_ALWAYS);
-
     GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file("D:/music/assets/logo.png", NULL);
 
     // Tạo GtkImage để hiển thị ảnh
@@ -39,7 +38,7 @@ void intro_show() {
 
     //chuyển qua window sign in và end window hiện tại
     g_timeout_add_seconds(2, (GSourceFunc)gtk_widget_destroy, intro_window);
-    g_timeout_add_seconds(2, (GSourceFunc)sign_in, intro_window);
+    g_timeout_add_seconds(2, (GSourceFunc)signin_show, intro_window);
 
     // Bắt đầu vòng lặp sự kiện GTK
     gtk_main();

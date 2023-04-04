@@ -49,7 +49,7 @@ int login_clicked(GtkWidget *widget, gpointer data) {
     /* Hủy hộp thoại */
     gtk_widget_destroy(dialog);
 }
-void sign_in()
+void signin_show()
 {
     // Tạo cửa sổ đăng nhập
     sign_in_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
@@ -88,6 +88,7 @@ void sign_in()
     gtk_box_pack_start(GTK_BOX(box), login_button, FALSE, FALSE, 0);
 
     gtk_window_set_position(GTK_WINDOW(sign_in_window), GTK_WIN_POS_CENTER_ALWAYS);
+
     // Hiển thị cửa sổ đăng nhập
     gtk_widget_show_all(sign_in_window);
 

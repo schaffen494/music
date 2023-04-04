@@ -9,6 +9,7 @@ include_directories(${GTK3_INCLUDE_DIRS})
 link_directories(${GTK3_LIBRARY_DIRS})
 add_definitions(${GTK3_CFLAGS_OTHER})
 
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -26,14 +27,11 @@ add_executable(music
         src/components/main_menu.c
         src/components/main_menu.h
         src/components/searchBar.h
-        src/model/songs.c
-        src/model/songs.h
-        src/model/user.c
-        src/model/user.h
         src/db/connectData.c
         src/db/connectData.h
         src/components/searchBar.h
-        src/components/searchBar.css src/model/playlist.c src/model/playlist.h src/model/album.c src/model/album.h)
+        src/components/searchBar.css src/model/user.c src/model/user.h)
 
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${SQLITE3_LIBRARY})
+target_link_libraries(${PROJECT_NAME} winmm.lib)
