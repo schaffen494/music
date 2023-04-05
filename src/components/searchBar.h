@@ -1,3 +1,5 @@
+#ifndef MUSIC_SEARCH_BAR_H
+#define MUSIC_SEARCH_BAR_H
 #include <gtk/gtk.h>
 
 static void search_button_clicked(GtkButton *button, gpointer user_data) {
@@ -59,3 +61,5 @@ void create_Searchbar(GtkWidget* window) {
     // Start the main loop
     gtk_main();
 }
+
+#endif MUSIC_SEARCH_BAR_H

@@ -26,14 +26,12 @@ add_executable(music
         src/components/main_menu.c
         src/components/main_menu.h
         src/components/searchBar.h
-        src/model/songs.c
-        src/model/songs.h
-        src/model/user.c
-        src/model/user.h
         src/db/connectData.c
         src/db/connectData.h
         src/components/searchBar.h
-        src/components/searchBar.css src/model/playlist.c src/model/playlist.h src/model/album.c src/model/album.h)
+        src/components/searchBar.css
+        src/components/musicBar.h
+        src/components/musicBar.h)
 
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${SQLITE3_LIBRARY})

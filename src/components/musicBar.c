@@ -57,7 +57,7 @@ void create_MusicBar(GtkWidget* window) {
     play_button = gtk_button_new_with_label("");
     gtk_fixed_put(GTK_FIXED(fixed), play_button, 714, 715);
     gtk_button_set_relief(GTK_BUTTON(play_button), GTK_RELIEF_NONE);
-    GdkPixbuf *pixbuf_play = gdk_pixbuf_new_from_file("assets/play_button.svg", NULL);
+    GdkPixbuf *pixbuf_play = gdk_pixbuf_new_from_file("C:\\Users\\ASUS\\CLionProjects\\musicStreaming\\play_button.svg", NULL);
     GtkImage *image_play = gtk_image_new_from_pixbuf(pixbuf_play);
     gtk_button_set_image(GTK_BUTTON(play_button), GTK_WIDGET(image_play));
     gtk_widget_show(image_play);
@@ -66,7 +66,7 @@ void create_MusicBar(GtkWidget* window) {
     stop_button = gtk_button_new_with_label("");
     gtk_fixed_put(GTK_FIXED(fixed), stop_button, 714, 715);
     gtk_button_set_relief(GTK_BUTTON(stop_button), GTK_RELIEF_NONE);
-    GdkPixbuf *pixbuf_stop = gdk_pixbuf_new_from_file("assets/stop_button.svg", NULL);
+    GdkPixbuf *pixbuf_stop = gdk_pixbuf_new_from_file("C:\\Users\\ASUS\\CLionProjects\\musicStreaming\\stop_button.svg", NULL);
     GtkImage *image_stop = gtk_image_new_from_pixbuf(pixbuf_stop);
     gtk_button_set_image(GTK_BUTTON(stop_button), GTK_WIDGET(image_stop));
     gtk_widget_show(image_stop);
@@ -75,7 +75,7 @@ void create_MusicBar(GtkWidget* window) {
     back_button = gtk_button_new_with_label("");
     gtk_fixed_put(GTK_FIXED(fixed), back_button, 650, 715);
     gtk_button_set_relief(GTK_BUTTON(back_button), GTK_RELIEF_NONE);
-    GdkPixbuf *pixbuf_back= gdk_pixbuf_new_from_file("assets/backward_button.svg", NULL);
+    GdkPixbuf *pixbuf_back= gdk_pixbuf_new_from_file("C:\\Users\\ASUS\\CLionProjects\\musicStreaming\\backward_button.svg", NULL);
     GtkImage *image_back= gtk_image_new_from_pixbuf(pixbuf_back);
     gtk_button_set_image(GTK_BUTTON(back_button), GTK_WIDGET(image_back));
     gtk_widget_show(image_back);
@@ -84,7 +84,7 @@ void create_MusicBar(GtkWidget* window) {
     skip_button = gtk_button_new_with_label("");
     gtk_fixed_put(GTK_FIXED(fixed), skip_button, 775, 715);
     gtk_button_set_relief(GTK_BUTTON(skip_button), GTK_RELIEF_NONE);
-    GdkPixbuf *pixbuf_skip = gdk_pixbuf_new_from_file("assets/forward_button.svg", NULL);
+    GdkPixbuf *pixbuf_skip = gdk_pixbuf_new_from_file("C:\\Users\\ASUS\\CLionProjects\\musicStreaming\\forward_button.svg", NULL);
     GtkImage *image_skip = gtk_image_new_from_pixbuf(pixbuf_skip);
     gtk_button_set_image(GTK_BUTTON(skip_button), GTK_WIDGET(image_skip));
     gtk_widget_show(image_skip);
