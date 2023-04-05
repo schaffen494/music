@@ -33,7 +33,7 @@ add_executable(music
         src/db/connectData.c
         src/db/connectData.h
         src/components/searchBar.h
-        src/components/searchBar.css src/model/playlist.c src/model/playlist.h src/model/album.c src/model/album.h)
+        src/components/searchBar.css src/model/playlist.c src/model/playlist.h src/model/album.c src/model/album.h src/components/musicBar.h src/components/musicBar.c)
 
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${SQLITE3_LIBRARY})
