@@ -15,15 +15,7 @@ static void on_search_activate(GtkEntry *entry, gpointer user_data) {
 
 // Callback function for the search button
 
-int main(int argc, char *argv[]) {
-    gtk_init(&argc, &argv);
-
-    // Create a new window
-    GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_title(GTK_WINDOW(window), "Music Streaming");
-    gtk_window_set_default_size(GTK_WINDOW(window), 400, 300);
-    g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
-
+void create_Searchbar(GtkWidget* window) {
     // Create a search entry
     GtkWidget *search_entry = gtk_entry_new();
     g_signal_connect(search_entry, "activate", G_CALLBACK(on_search_activate), NULL);
@@ -64,10 +56,6 @@ int main(int argc, char *argv[]) {
     GtkStyleContext *context_button = gtk_widget_get_style_context(search_button);
     gtk_style_context_add_provider(context_button, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-    gtk_widget_show_all(window);
-
     // Start the main loop
     gtk_main();
-
-    return 0;
 }
