@@ -7,5 +7,5 @@
 #include <gtk/gtk.h>
 
 gboolean authenticate_user(const char *username, const char *password);
-void sign_in();
+void signin_show();
 #endif //MUSIC_SIGN_IN_H

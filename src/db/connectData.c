@@ -2,13 +2,13 @@
 #include <sqlite3.h>
 #include <string.h>
 #include<stdio.h>
+sqlite3* db;
+sqlite3_stmt* stmt;
+char *err_msg = 0;
+int rc;
 
-int check_Sign_in(char username[], char password[])
+int connect()
 {
-    sqlite3* db;
-    sqlite3_stmt* stmt;
-    int rc;
-
     // Mở kết nối tới cơ sở dữ liệu SQLite
     rc = sqlite3_open("D:/music/src/db/music.db", &db);
 
@@ -18,7 +18,11 @@ int check_Sign_in(char username[], char password[])
         sqlite3_close(db);
         return LOGIN_FAIL;
     }
-
+    return 0;
+}
+int check_Sign_in(char username[], char password[])
+{
+    connect();
     // Truy vấn username và password từ bảng users
     const char* sql = "SELECT * FROM users WHERE username = ? AND password = ?";
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
@@ -53,22 +57,7 @@ int check_Sign_in(char username[], char password[])
 
 int add_account(char username[], char password[])
 {
-    //kết nối với database
-    sqlite3 *db;
-    char *err_msg = 0;
-    int rc;
-    sqlite3_stmt* stmt;
-    rc = sqlite3_open("D:/music/src/db/music.db", &db);
-
-    //kiểm tra kết nối
-    if (rc != SQLITE_OK) {
-        printf("Cannot open database: %s\n", sqlite3_errmsg(db));
-        sqlite3_finalize(stmt);
-        sqlite3_free(err_msg);
-        sqlite3_close(db);
-        return SIGNUP_FAIL;
-    }
-
+    connect();
     //truy vấn account
     char* sql = "SELECT * FROM users WHERE username = ? ";
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
@@ -116,5 +105,26 @@ int add_account(char username[], char password[])
             return SIGNUP_OK;
         }
     }
+
+}
+
+int get_list()
+{
+
+}
+int add_playlist()
+{
+
+}
+int delete_song_playlist()
+{
+
+}
+int add_song_playlist()
+{
+
+}
+int get_found_song()
+{
 
 }
