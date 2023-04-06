@@ -15,6 +15,17 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 add_executable(music
         src/main.c
         src/constant.h
+        src/components/main_menu.c
+        src/components/main_menu.h
+        src/components/searchBar.h
+        src/components/searchBar.h
+        src/components/searchBar.css
+        src/components/musicBar.h
+        src/components/musicBar.h
+        src/components/selection_menu.h
+        src/components/selection_menu.h
+        src/db/connectData.c
+        src/db/connectData.h
         src/view/intro.c
         src/view/intro.h
         src/view/main_board.c
@@ -22,16 +33,7 @@ add_executable(music
         src/view/sign_in.c
         src/view/sign_in.h
         src/view/sign_up.c
-        src/view/sign_up.h
-        src/components/main_menu.c
-        src/components/main_menu.h
-        src/components/searchBar.h
-        src/db/connectData.c
-        src/db/connectData.h
-        src/components/searchBar.h
-        src/components/searchBar.css
-        src/components/musicBar.h
-        src/components/musicBar.h)
+        src/view/sign_up.h)
 
 target_link_libraries(music ${GTK3_LIBRARIES})
 target_link_libraries(music ${SQLITE3_LIBRARY})
