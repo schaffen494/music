@@ -6,17 +6,6 @@
 #include "searchBar.h"
 #include "selection_menu.h"
 
-static void delete_all_children_of_container(GtkWidget *content_grid)
-{
-    GList *children_list = gtk_container_get_children(GTK_CONTAINER(content_grid));
-    int i = 0;
-
-    for (; i < g_list_length(children_list); i++)
-    {
-        gtk_container_remove(GTK_CONTAINER(content_grid), g_list_nth_data(children_list, i));
-    }
-}
-
 static void on_login_clicked(GtkButton *button, gpointer user_data)
 {
     // Xử lý sự kiện khi người dùng nhấn nút Đăng nhập
@@ -28,7 +17,6 @@ static void on_register_clicked(GtkButton *button, gpointer user_data) {
 
 static void on_search_clicked(GtkButton *button, gpointer user_data) {
     // Xử lý sự kiện khi người dùng nhấn nút Tìm kiếm
-    create_Searchbar(user_data);
 }
 
 void create_menu(GtkWidget *window) {
