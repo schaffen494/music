@@ -1,21 +1,21 @@
-#include <gtk/gtk.h>
+#include "intro_view.h"
+#include <stdio.h>
 #include "src/constant.h"
-#include "src/view/sign_in.h"
+#include "src/view/signin_view.h"
 
-void intro_show() {
-
+void intro_show()
+{
     // Tạo một cửa sổ mới
     GtkWidget *intro_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
     //đặt các thuộc tính
-    gtk_widget_set_size_request(intro_window, width_app, height_app);
+    gtk_widget_set_size_request(intro_window, 500, 500);
     gtk_window_set_decorated(GTK_WINDOW(intro_window), FALSE);
 
     GdkRGBA color;
-    gdk_rgba_parse(&color, "#0a0931");
+    gdk_rgba_parse(&color, "#ffffff");
     gtk_widget_override_background_color(intro_window, GTK_STATE_FLAG_NORMAL, &color);
-    // Lấy kích thước màn hình
-    GdkScreen *screen = gdk_screen_get_default();
+
 
 
     gtk_window_set_position(GTK_WINDOW(intro_window), GTK_WIN_POS_CENTER_ALWAYS);
@@ -38,8 +38,8 @@ void intro_show() {
 
     //chuyển qua window sign in và end window hiện tại
     g_timeout_add_seconds(2, (GSourceFunc)gtk_widget_destroy, intro_window);
-    g_timeout_add_seconds(2, (GSourceFunc)signin_show, intro_window);
+    g_timeout_add_seconds(2, (GSourceFunc)sign_in_show, intro_window);
 
-    // Bắt đầu vòng lặp sự kiện GTK
-    gtk_main();
+        // Bắt đầu vòng lặp sự kiện GTK
+        gtk_main();
 }

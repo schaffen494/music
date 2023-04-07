@@ -1,28 +1,23 @@
-#include "connectData.h"
-#include <sqlite3.h>
-#include <string.h>
-#include<stdio.h>
+//
+// Created by ADMIN on 4/6/2023.
+//
+
+#include "users.h"
+#include "src/config/database_config.h"
+
 sqlite3* db;
 sqlite3_stmt* stmt;
 char *err_msg = 0;
 int rc;
-
-int connect()
+int check_sign_in(char username[],char password[])
 {
-    // Mở kết nối tới cơ sở dữ liệu SQLite
-    rc = sqlite3_open("D:/music/src/db/music.db", &db);
-
+    rc = sqlite3_open(absolute_path, &db);
     if (rc != SQLITE_OK) {
         printf("Can not access to database: %s\n", sqlite3_errmsg(db));
         sqlite3_finalize(stmt);
         sqlite3_close(db);
         return LOGIN_FAIL;
     }
-    return 0;
-}
-int check_Sign_in(char username[], char password[])
-{
-    connect();
     // Truy vấn username và password từ bảng users
     const char* sql = "SELECT * FROM users WHERE username = ? AND password = ?";
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
@@ -57,7 +52,13 @@ int check_Sign_in(char username[], char password[])
 
 int add_account(char username[], char password[])
 {
-    connect();
+    rc = sqlite3_open(absolute_path, &db);
+    if (rc != SQLITE_OK) {
+        printf("Can not access to database: %s\n", sqlite3_errmsg(db));
+        sqlite3_finalize(stmt);
+        sqlite3_close(db);
+        return LOGIN_FAIL;
+    }
     //truy vấn account
     char* sql = "SELECT * FROM users WHERE username = ? ";
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);
@@ -105,26 +106,5 @@ int add_account(char username[], char password[])
             return SIGNUP_OK;
         }
     }
-
-}
-
-int get_list()
-{
-
-}
-int add_playlist()
-{
-
-}
-int delete_song_playlist()
-{
-
-}
-int add_song_playlist()
-{
-
-}
-int get_found_song()
-{
 
 }
