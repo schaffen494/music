@@ -13,7 +13,7 @@ void intro_show()
     gtk_window_set_decorated(GTK_WINDOW(intro_window), FALSE);
 
     GdkRGBA color;
-    gdk_rgba_parse(&color, "#ffffff");
+    gdk_rgba_parse(&color, "#3c3f41");
     gtk_widget_override_background_color(intro_window, GTK_STATE_FLAG_NORMAL, &color);
 
 

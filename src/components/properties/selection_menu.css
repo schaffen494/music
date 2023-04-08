@@ -1,0 +1,27 @@
+box#background-box
+{
+    background-color: #292929;
+}
+
+button
+{
+    background-color: #292929;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+button:hover
+{
+
+    background-color: #3c3f41;
+    background-image: none;
+    color: #ffffff;
+}
+
+button:focus
+{
+
+    background-color: #3c3f41;
+    background-image: none;
+    color: #ffffff;
+}

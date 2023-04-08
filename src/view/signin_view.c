@@ -68,6 +68,10 @@ void sign_in_show(){
     gtk_window_set_resizable(GTK_WINDOW(sign_in_window), FALSE);
     gtk_container_set_border_width(GTK_CONTAINER(sign_in_window), 10);
 
+    GdkRGBA color;
+    gdk_rgba_parse(&color, "#3c3f41");
+    gtk_widget_override_background_color(sign_in_window, GTK_STATE_FLAG_NORMAL, &color);
+
     // Tạo layout
     GtkWidget *grid = gtk_grid_new();
     gtk_container_add(GTK_CONTAINER(sign_in_window), grid);
@@ -101,7 +105,7 @@ void sign_in_show(){
 
     // Nạp file CSS để thiết lập màu cho các phần tử
     GtkCssProvider *provider = gtk_css_provider_new();
-    gtk_css_provider_load_from_path(provider, "src/components/log_in.css", NULL);
+    gtk_css_provider_load_from_path(provider, "src/components/properties/log_in.css", NULL);
     gtk_style_context_add_provider_for_screen(gdk_screen_get_default(),
                                               GTK_STYLE_PROVIDER(provider),
                                               GTK_STYLE_PROVIDER_PRIORITY_USER);
