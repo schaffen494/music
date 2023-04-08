@@ -40,6 +40,6 @@ void intro_show()
     g_timeout_add_seconds(2, (GSourceFunc)gtk_widget_destroy, intro_window);
     g_timeout_add_seconds(2, (GSourceFunc)sign_in_show, intro_window);
 
-        // Bắt đầu vòng lặp sự kiện GTK
-        gtk_main();
+    // Bắt đầu vòng lặp sự kiện GTK
+    gtk_main();
 }
