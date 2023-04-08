@@ -12,6 +12,7 @@ void create_selection_menu(GtkWidget *grid)
 {
     GtkWidget *menu_box,
               *bottom_box, // Empty box below menu box
+              *background_box,
               *avatar,
               *discover_button,
               *follow_button,
@@ -22,14 +23,13 @@ void create_selection_menu(GtkWidget *grid)
     menu_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 30);
     gtk_grid_attach(GTK_GRID(grid), menu_box, 0, 1, 1, 1);
 
-    // Create a vertical box to contain the menu grid
+    // Create a empty box to occupy the bottom of the selection menu
     bottom_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
     gtk_grid_attach(GTK_GRID(grid), bottom_box, 0, 2, 1, 1);
     gtk_widget_set_vexpand(bottom_box, TRUE);
 
     // Create the logo
     avatar = gtk_image_new_from_file("assets\\logo_minimized.png");
-    gtk_widget_set_name(avatar, "logo");
     gtk_grid_attach(GTK_GRID(grid), avatar, 0, 0, 1, 1);
 
     // Create the Discover button
@@ -51,6 +51,11 @@ void create_selection_menu(GtkWidget *grid)
     upload_button = gtk_button_new_with_label("Upload");
     gtk_button_set_relief(GTK_BUTTON(upload_button), GTK_RELIEF_NONE);
     gtk_box_pack_start(GTK_BOX(menu_box), upload_button, FALSE, FALSE, 0);
+
+    // Create a background box
+    background_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
+    gtk_widget_set_name(background_box, "background-box");
+    gtk_grid_attach(GTK_GRID(grid), background_box, 0, 0, 1, 3);
 
     // Load css file
     GtkCssProvider *provider = gtk_css_provider_new();

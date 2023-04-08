@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(music C)
+project(${PROJECT_NAME} C)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
@@ -9,31 +9,27 @@ include_directories(${GTK3_INCLUDE_DIRS})
 link_directories(${GTK3_LIBRARY_DIRS})
 add_definitions(${GTK3_CFLAGS_OTHER})
 
+set(PROJECT_DIR ${PROJECT_SOURCE_DIR})
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_executable(music
+add_executable(${PROJECT_NAME}
         src/main.c
+        src/view/intro_view.c
+        src/view/intro_view.h
         src/constant.h
-        src/components/main_menu.c
-        src/components/main_menu.h
-        src/components/searchBar.h
-        src/components/searchBar.h
-        src/components/searchBar.css
-        src/components/musicBar.h
-        src/components/musicBar.h
-        src/components/selection_menu.h
-        src/components/selection_menu.h
-        src/db/connectData.c
-        src/db/connectData.h
-        src/view/intro.c
-        src/view/intro.h
-        src/view/main_board.c
-        src/view/main_board.h
-        src/view/sign_in.c
-        src/view/sign_in.h
-        src/view/sign_up.c
-        src/view/sign_up.h)
+        src/config/database_config.c
+        src/config/database_config.h
+        src/view/signin_view.c
+        src/view/signin_view.h
+        src/models/users.c
+        src/models/users.h
+        src/view/signup_view.c
+        src/view/signup_view.h
+        src/view/mainboard_view.c
+        src/view/mainboard_view.h
+        src/components/selection_menu.css
+        src/components/selection_menu.h src/components/play_music_taskbar.h)
 
-target_link_libraries(music ${GTK3_LIBRARIES})
-target_link_libraries(music ${SQLITE3_LIBRARY})
+target_link_libraries(${PROJECT_NAME} ${GTK3_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${SQLITE3_LIBRARY})

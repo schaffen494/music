@@ -1,0 +1,13 @@
+
+/* Set background and text color for buttons */
+#button_login {
+    background-color: #0a0931;
+    color: #ffffff;
+}
+
+/* Set background and text color for button_register */
+#button_register {
+    background-color: #ffffff;
+    color: #0a0931;
+    border: 1px solid #0a0931;
+}

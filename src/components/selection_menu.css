@@ -1,4 +1,4 @@
-box
+box#background-box
 {
     background-color: #0a0931;
 }
@@ -22,9 +22,4 @@ button:focus
     background-color: #1a187e;
     background-image: none;
     color: #ffffff;
-}
-
-image#logo
-{
-    background-color: #0a0931;
 }
