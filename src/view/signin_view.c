@@ -82,12 +82,14 @@ void sign_in_show(){
 
     // Tạo label và entry cho tên đăng nhập
     GtkWidget *label_username = gtk_label_new("Username:");
+    gtk_widget_set_name(label_username, "label_username");
     username_entry_login= gtk_entry_new();
     gtk_grid_attach(GTK_GRID(grid), label_username, 0, 1, 1, 1);
     gtk_grid_attach(GTK_GRID(grid), username_entry_login, 1, 1, 1, 1);
 
     // Tạo label và entry cho mật khẩu
     GtkWidget *label_password = gtk_label_new("Password:");
+    gtk_widget_set_name(label_password, "label_password");
     password_entry_login = gtk_entry_new();
     gtk_entry_set_visibility(GTK_ENTRY(password_entry_login), FALSE);
     gtk_grid_attach(GTK_GRID(grid), label_password, 0, 2, 1, 1);
@@ -95,17 +97,19 @@ void sign_in_show(){
 
     // Tạo button đăng nhập
     GtkWidget *button_login = gtk_button_new_with_label("Login");
+    gtk_widget_set_name(button_login, "button_login");
     g_signal_connect(button_login, "clicked", G_CALLBACK(login_clicked), NULL);
     gtk_grid_attach(GTK_GRID(grid), button_login, 0, 3, 1, 1);
 
     // Tạo button đăng ký
     GtkWidget *button_register = gtk_button_new_with_label("Register");
+    gtk_widget_set_name(button_register, "button_register");
     g_signal_connect(button_register, "clicked", G_CALLBACK(signup_clicked), NULL);
     gtk_grid_attach(GTK_GRID(grid), button_register, 1, 3, 1, 1);
 
     // Nạp file CSS để thiết lập màu cho các phần tử
     GtkCssProvider *provider = gtk_css_provider_new();
-    gtk_css_provider_load_from_path(provider, "src/components/properties/log_in.css", NULL);
+    gtk_css_provider_load_from_path(provider, "D:/mystic_melody/src/components/properties/log_in.css", NULL);
     gtk_style_context_add_provider_for_screen(gdk_screen_get_default(),
                                               GTK_STYLE_PROVIDER(provider),
                                               GTK_STYLE_PROVIDER_PRIORITY_USER);
