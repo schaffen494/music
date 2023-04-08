@@ -28,9 +28,8 @@ add_executable(${PROJECT_NAME}
         src/view/signup_view.h
         src/view/mainboard_view.c
         src/view/mainboard_view.h
-        src/components/selection_menu.c
         src/components/selection_menu.css
-        src/components/selection_menu.h)
+        src/components/selection_menu.h src/components/play_music_taskbar.h)
 
 target_link_libraries(${PROJECT_NAME} ${GTK3_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${SQLITE3_LIBRARY})

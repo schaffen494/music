@@ -4,6 +4,8 @@
 
 #include "mainboard_view.h"
 #include "src/components/selection_menu.h"
+#include "src/components/play_music_taskbar.h"
+
 GtkWidget *main_board_window;
 void main_board_show()
 {
@@ -20,7 +22,9 @@ void main_board_show()
     // Create the original grid
     GtkWidget *grid = gtk_grid_new();
     gtk_grid_attach(GTK_GRID(main_grid), grid, 0, 0, 1, 1);
+
     create_selection_menu(grid);
+    init_play_music_taskbar(grid);
 
     gtk_widget_show_all(main_board_window);
     gtk_main();
