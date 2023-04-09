@@ -10,6 +10,6 @@
 #include <glib-object.h>
 #include <math.h>
 
-void create_MusicBar(GtkWidget* window);
+void create_MusicBar(GtkWidget* fixed);
 
 #endif //MUSIC_MUSICBAR_H

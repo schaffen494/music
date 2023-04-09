@@ -4,7 +4,7 @@
 
 #include "mainboard_view.h"
 #include "src/components/selection_menu.h"
-#include "src/components/play_music_taskbar.h"
+#include "src/components/musicBar.h"
 
 GtkWidget *main_board_window;
 void main_board_show()
@@ -18,16 +18,15 @@ void main_board_show()
     GdkRGBA color;
     gdk_rgba_parse(&color, "#1e1e1e");
     gtk_widget_override_background_color(main_board_window, GTK_STATE_FLAG_NORMAL, &color);
-    // Create the main grid to contain the selection menu, the background, and the new grids
-    GtkWidget *main_grid = gtk_grid_new();
-    gtk_container_add(GTK_CONTAINER(main_board_window), main_grid);
 
-    // Create the original grid
-    GtkWidget *grid = gtk_grid_new();
-    gtk_grid_attach(GTK_GRID(main_grid), grid, 0, 0, 1, 1);
+    // Tạo fixed container để set vị trí của các Widget
+    GtkWidget* fixed = gtk_fixed_new();
+    gtk_container_add(GTK_CONTAINER(main_board_window), fixed);
 
-    create_selection_menu(grid);
-    init_play_music_taskbar(grid);
+    create_selection_menu(fixed);
+    create_MusicBar(fixed);
+    // Xử lý sự kiện đóng cửa sổ
+    g_signal_connect(G_OBJECT(main_board_window), "destroy", G_CALLBACK(exit), NULL);
 
     gtk_widget_show_all(main_board_window);
     gtk_main();

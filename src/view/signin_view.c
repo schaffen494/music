@@ -109,7 +109,7 @@ void sign_in_show(){
 
     // Nạp file CSS để thiết lập màu cho các phần tử
     GtkCssProvider *provider = gtk_css_provider_new();
-    gtk_css_provider_load_from_path(provider, "D:/mystic_melody/src/components/properties/log_in.css", NULL);
+    gtk_css_provider_load_from_path(provider, "D:/mystic_melody/src/properties/sign_in.css", NULL);
     gtk_style_context_add_provider_for_screen(gdk_screen_get_default(),
                                               GTK_STYLE_PROVIDER(provider),
                                               GTK_STYLE_PROVIDER_PRIORITY_USER);

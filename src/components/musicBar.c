@@ -3,12 +3,12 @@
 //
 #include "musicBar.h"
 
-    GtkWidget *play_button, *stop_button, *back_button, *skip_button, *sound_label, *progress_bar, *song_label, *artist_label;
-    gboolean timer_active = FALSE;
-    guint progress_timeout_id = 0;
-    // Set giả định độ dài của bài hats
-    double song_length = 240.0;
-    double playback_position = 0.0;
+GtkWidget *play_button, *stop_button, *back_button, *skip_button, *sound_label, *progress_bar, *song_label, *artist_label;
+gboolean timer_active = FALSE;
+guint progress_timeout_id = 0;
+// Set giả định độ dài của bài hats
+double song_length = 240.0;
+double playback_position = 0.0;
 
 void play_song(GtkWidget *widget, gpointer data);
 void stop_song(GtkWidget *widget, gpointer data);
@@ -19,16 +19,13 @@ void draw_image(GtkWidget *widget, cairo_t *cr, gpointer data);
 static void on_sound_value_changed(GtkWidget *widget, gpointer data);
 gboolean update_progress_bar(gpointer data);
 
-void create_MusicBar(GtkWidget* window) {
-    // Tạo fixed container để set vị trí của các Widget
-    GtkWidget* fixed = gtk_fixed_new();
-    gtk_container_add(GTK_CONTAINER(window), fixed);
+void create_MusicBar(GtkWidget* fixed) {
 
     // Tạo một hình chữ nhật để chứa toàn bộ Widget
     GtkWidget *rect_area = gtk_drawing_area_new();
     // Set size và vị trí cho hình chữ nhật
     gtk_widget_set_size_request(rect_area, 1500, 120);
-    gtk_fixed_put(GTK_FIXED(fixed), rect_area, 0, 684);
+    gtk_fixed_put(GTK_FIXED(fixed), rect_area, 0, 680);
     // bắt đầu vẽ hình chữ nhật
     g_signal_connect(rect_area, "draw", G_CALLBACK(on_draw_event), NULL);
 
@@ -86,9 +83,6 @@ void create_MusicBar(GtkWidget* window) {
     GtkWidget *image = gtk_image_new_from_file("assets/OIP.jpg");
     gtk_widget_set_name(image, "song-poster");
     gtk_fixed_put(GTK_FIXED(fixed), image, 36, 687);
-    // Thêm ảnh vào màn hình
-    gtk_container_add(GTK_CONTAINER(window), image);
-
     // Khởi tạo thanh điều chỉnh âm thanh
     GtkAdjustment *adjustment = gtk_adjustment_new(50.0, 0.0, 100.0, 1.0, 10.0, 0.0);
     GtkWidget *scale = gtk_scale_new(GTK_ORIENTATION_HORIZONTAL, GTK_ADJUSTMENT(adjustment));
@@ -96,6 +90,7 @@ void create_MusicBar(GtkWidget* window) {
     gtk_fixed_put(GTK_FIXED(fixed), scale, 1280, 720);
     gtk_widget_set_hexpand(scale, TRUE);
     gtk_scale_set_draw_value(GTK_SCALE(scale), FALSE);
+
     // Tạo một cái label để hiển thị giá trị của âm thanh
     GtkWidget *label = gtk_label_new(NULL);
     gtk_fixed_put(GTK_FIXED(fixed), label, 1170, 725);
@@ -113,7 +108,7 @@ void create_MusicBar(GtkWidget* window) {
     // Set size
     gtk_widget_set_size_request(progress_bar, 1500, 6);
     // Set vị trí
-    gtk_fixed_put(GTK_FIXED(fixed), progress_bar, 0, 682);
+    gtk_fixed_put(GTK_FIXED(fixed), progress_bar, 0, 662);
 
     // Tạo lable để chứ tên bài hát và tên nghệ sĩ
     song_label = gtk_label_new("Song Name");
@@ -130,16 +125,13 @@ void create_MusicBar(GtkWidget* window) {
     GdkScreen *screen = gdk_display_get_default_screen (display);
     GError *error = NULL;
 
-    gtk_css_provider_load_from_path(provider, "src/components/musicBar.css", &error);
+    gtk_css_provider_load_from_path(provider, "D:\\mystic_melody\\src\\properties\\style.css", &error);
     if (error)
     {
         g_warning ("%s", error->message);
         g_clear_error (&error);
     }
     gtk_style_context_add_provider_for_screen(screen, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-    gtk_container_add(GTK_CONTAINER(window), box);
-    gtk_main();
 }
 
 void play_song(GtkWidget *widget, gpointer data) {
@@ -183,17 +175,13 @@ void skip_song(GtkWidget *widget, gpointer data) {
 }
 
 void on_draw_event(GtkWidget *widget, cairo_t *cr, gpointer user_data) {
-    // Set color và width của hcn
-    cairo_set_source_rgb(cr, 1.0, 0.0, 0.0); // border color
-    cairo_set_line_width(cr, 3.0);
 
     // Chỉnh màu cho background của hcn
-    cairo_set_source_rgb(cr, 1.0, 0.92, 0.8); // fill color
+    cairo_set_source_rgb(cr, 25/255.0, 25/255.0, 24/255.0);// fill color
 
     // Bắt đầu vẽ hcn
     cairo_rectangle(cr, 0, 0, 1500, 120);
     cairo_fill_preserve(cr); // fill the rectangle
-    cairo_stroke(cr); // draw the border
 }
 
 static void on_sound_value_changed(GtkWidget *range, gpointer data) {
@@ -229,6 +217,5 @@ gboolean update_progress_bar(gpointer data) {
 
     return G_SOURCE_CONTINUE; // continue the timer
 }
-
 
 

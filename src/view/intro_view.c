@@ -19,7 +19,7 @@ void intro_show()
 
 
     gtk_window_set_position(GTK_WINDOW(intro_window), GTK_WIN_POS_CENTER_ALWAYS);
-    GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file("D:/music/assets/logo.png", NULL);
+    GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file("D:/mystic_melody/assets/logo.png", NULL);
 
     // Tạo GtkImage để hiển thị ảnh
     GtkWidget *image = gtk_image_new_from_pixbuf(pixbuf);
@@ -34,7 +34,7 @@ void intro_show()
     gtk_style_context_add_provider(context, GTK_STYLE_PROVIDER(css_provider), GTK_STYLE_PROVIDER_PRIORITY_USER);
 
     // Hiển thị cửa sổ intro
-    gtk_widget_show_all(intro_window);
+        gtk_widget_show_all(intro_window);
 
     //chuyển qua window sign in và end window hiện tại
     g_timeout_add_seconds(2, (GSourceFunc)gtk_widget_destroy, intro_window);
