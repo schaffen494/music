@@ -10,8 +10,8 @@ int main(int argc, char *argv[]) {
     gtk_init(&argc, &argv);
 
     //show intro window
-    intro_show();
-
+    //intro_show();
+    main_board_show();
     return 0;
 
 }

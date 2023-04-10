@@ -7,5 +7,6 @@
 #include <gtk/gtk.h>
 #include "src/constant.h"
 extern GtkWidget *main_board_window;
+
 void main_board_show();
 #endif //C_MAIN_BOARD_VIEW_H

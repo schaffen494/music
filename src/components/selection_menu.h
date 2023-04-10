@@ -65,6 +65,7 @@ void create_selection_menu(GtkWidget *fixed) {
     gtk_style_context_add_provider_for_screen(screen, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 
 }
+
 void on_draw_menu(GtkWidget *widget, cairo_t *cr, gpointer user_data) {
 
     // Chỉnh màu cho background của hcn

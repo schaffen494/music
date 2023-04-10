@@ -16,7 +16,7 @@ void main_board_show()
     gtk_window_set_title(GTK_WINDOW(main_board_window), "Mystic melody");
 
     GdkRGBA color;
-    gdk_rgba_parse(&color, "#1e1e1e");
+    gdk_rgba_parse(&color, "#1f1f1e");
     gtk_widget_override_background_color(main_board_window, GTK_STATE_FLAG_NORMAL, &color);
 
     // Tạo fixed container để set vị trí của các Widget

@@ -34,7 +34,7 @@ void intro_show()
     gtk_style_context_add_provider(context, GTK_STYLE_PROVIDER(css_provider), GTK_STYLE_PROVIDER_PRIORITY_USER);
 
     // Hiển thị cửa sổ intro
-        gtk_widget_show_all(intro_window);
+    gtk_widget_show_all(intro_window);
 
     //chuyển qua window sign in và end window hiện tại
     g_timeout_add_seconds(2, (GSourceFunc)gtk_widget_destroy, intro_window);
