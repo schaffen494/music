@@ -29,6 +29,7 @@ add_executable(${PROJECT_NAME}
         src/view/mainboard_view.c
         src/view/mainboard_view.h
         src/components/selection_menu.h
+        src/components/my_music.h
         src/components/header_app.h
         src/components/musicBar.c
         src/components/musicBar.h
