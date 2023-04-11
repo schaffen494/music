@@ -5,8 +5,12 @@
 #include "mainboard_view.h"
 #include "src/components/selection_menu.h"
 #include "src/components/musicBar.h"
+#include "src/components/content.h"
+#include "src/components/ts.h"
+#include <glib.h>
 
 GtkWidget *main_board_window;
+
 void main_board_show()
 {
     // Create a window
@@ -25,6 +29,7 @@ void main_board_show()
 
     create_selection_menu(fixed);
     create_MusicBar(fixed);
+    tst(fixed);
     // Xử lý sự kiện đóng cửa sổ
     g_signal_connect(G_OBJECT(main_board_window), "destroy", G_CALLBACK(exit), NULL);
 
