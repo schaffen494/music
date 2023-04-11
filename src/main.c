@@ -5,8 +5,9 @@
 
 int main(int argc, char *argv[]) {
 
-    //get link database
+    //get link database and project
     set_path();
+
     //gtk initialize gtk
     gtk_init(&argc, &argv);
 
@@ -14,3 +15,5 @@ int main(int argc, char *argv[]) {
     intro_show();
     return 0;
 }
+
+

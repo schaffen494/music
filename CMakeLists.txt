@@ -40,7 +40,7 @@ add_executable(${PROJECT_NAME}
         src/models/playlist.c
         src/models/playlist.h
         src/components/content.h
-        src/components/ts.h src/components/tri.c src/components/tri.h)
+        src/components/ts.h src/components/tri.c src/components/tri.h src/components/searchBar.c src/components/searchBar.h)
 
 target_link_libraries(${PROJECT_NAME} ${GTK3_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${SQLITE3_LIBRARY})
