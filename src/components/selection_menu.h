@@ -13,7 +13,7 @@ void create_selection_menu(GtkWidget *fixed) {
     // Tạo một hình chữ nhật để chứa toàn bộ Widget
     GtkWidget *rect_area = gtk_drawing_area_new();
     // Set size và vị trí cho hình chữ nhật
-    gtk_widget_set_size_request(rect_area,300 , 640);
+    gtk_widget_set_size_request(rect_area,300 , 663);
     gtk_fixed_put(GTK_FIXED(fixed), rect_area, 0, 0);
     // bắt đầu vẽ hình chữ nhật
     g_signal_connect(rect_area, "draw", G_CALLBACK(on_draw_menu), NULL);
