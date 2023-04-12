@@ -6,16 +6,22 @@
 #define MUSIC_SELECTION_MENU_H
 
 #include <gtk/gtk.h>
-
+#include "my_music.h"
 
 void on_draw_menu(GtkWidget *widget, cairo_t *cr, gpointer user_data);
 
-void create_selection_menu(GtkWidget *fixed) {
+void on_explore_clicked();
 
+void on_my_music_clicked();
+
+void on_upload_clicked();
+
+void create_selection_menu(GtkWidget *fixed)
+{
     // Tạo một hình chữ nhật để chứa toàn bộ Widget
     GtkWidget *rect_area = gtk_drawing_area_new();
     // Set size và vị trí cho hình chữ nhật
-    gtk_widget_set_size_request(rect_area,300 , 680);
+    gtk_widget_set_size_request(rect_area,300 , 663);
     gtk_fixed_put(GTK_FIXED(fixed), rect_area, 0, 0);
     // bắt đầu vẽ hình chữ nhật
     g_signal_connect(rect_area, "draw", G_CALLBACK(on_draw_menu), NULL);
@@ -38,6 +44,11 @@ void create_selection_menu(GtkWidget *fixed) {
     gtk_widget_set_size_request(upload, 300, 50);
     gtk_button_set_relief(GTK_BUTTON(upload), GTK_RELIEF_NONE);
 
+    // Add event clicked cho từng nút
+    g_signal_connect(explore, "clicked", G_CALLBACK(on_explore_clicked), NULL);
+    g_signal_connect(my_music, "clicked", G_CALLBACK(on_my_music_clicked), NULL);
+    g_signal_connect(upload, "clicked", G_CALLBACK(on_upload_clicked), NULL);
+
     // Thêm các buttons vào một hình chữ nhật
     GtkWidget *box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_box_pack_start(GTK_BOX(box), explore, FALSE, FALSE, 0);
@@ -47,9 +58,9 @@ void create_selection_menu(GtkWidget *fixed) {
 
     // Khởi tạo Logo của app ở đỉnh của selection menu
     GtkWidget *logo = gtk_image_new_from_file("assets/header_logo.png");
-    gtk_fixed_put(GTK_FIXED(fixed), logo, 20, 0);
+    gtk_fixed_put(GTK_FIXED(fixed), logo, 50, 0);
 
-    // Khởi tạo các icon của từng mục
+    // Thêm các icon của từng mục
     GtkWidget *explore_icon = gtk_image_new_from_file("assets/explore_icon.png");
     gtk_fixed_put(GTK_FIXED(fixed), explore_icon, 65, 184);
     GtkWidget *my_music_icon = gtk_image_new_from_file("assets/my_music_icon.png");
@@ -60,8 +71,8 @@ void create_selection_menu(GtkWidget *fixed) {
     //Load file css
     GtkCssProvider *provider = gtk_css_provider_new();
     GtkStyleContext *explore_context,
-            *my_music_context,
-            *upload_context;
+                    *my_music_context,
+                    *upload_context;
     GError *error = NULL;
 
     gtk_css_provider_load_from_path(provider, "src\\properties\\selection_menu.css", &error);
@@ -89,5 +100,20 @@ void on_draw_menu(GtkWidget *widget, cairo_t *cr, gpointer user_data) {
     cairo_rectangle(cr, 0, 0, 300, 680);
     cairo_fill_preserve(cr); // fill the rectangle
     cairo_stroke(cr); // draw the border
+}
+
+void on_explore_clicked()
+{
+    hide_my_music_tab();
+}
+
+void on_my_music_clicked()
+{
+    show_my_music_tab();
+}
+
+void on_upload_clicked()
+{
+    hide_my_music_tab();
 }
 #endif //MUSIC_SELECTION_MENU_H
