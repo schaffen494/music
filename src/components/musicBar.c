@@ -3,13 +3,15 @@
 //
 #include "musicBar.h"
 
-GtkWidget *play_button, *stop_button, *back_button, *skip_button, *sound_label, *progress_bar, *song_label, *artist_label;
-gboolean timer_active = FALSE;
-guint progress_timeout_id = 0;
-// Set giả định độ dài của bài hats
-double song_length = 240.0;
-double playback_position = 0.0;
+GtkWidget *play_button, *stop_button, *back_button, *skip_button, *sound_label, *progress_bar, *time_label, *song_label, *artist_label;
+gboolean is_playing = 0;
+gdouble progress = 0.0;
+gint elapsed_seconds = 0;
+gint song_duration = 300; // in seconds
+gdouble stored_progress_global = 0.0;
+gint stored_elapsed_seconds_global = 0;
 
+void toggle_stop_button();
 void play_song(GtkWidget *widget, gpointer data);
 void stop_song(GtkWidget *widget, gpointer data);
 void back_song(GtkWidget *widget, gpointer data);
@@ -24,7 +26,7 @@ void create_MusicBar(GtkWidget* fixed) {
     // Tạo một hình chữ nhật để chứa toàn bộ Widget
     GtkWidget *rect_area = gtk_drawing_area_new();
     // Set size và vị trí cho hình chữ nhật
-    gtk_widget_set_size_request(rect_area, 1500, 120);
+    gtk_widget_set_size_request(rect_area, 1500, 140);
     gtk_fixed_put(GTK_FIXED(fixed), rect_area, 0, 680);
     // bắt đầu vẽ hình chữ nhật
     g_signal_connect(rect_area, "draw", G_CALLBACK(on_draw_event), NULL);
@@ -103,12 +105,21 @@ void create_MusicBar(GtkWidget* fixed) {
     // Khi tương tác bằng cách kéo thả thì giá trị sẽ thay đổi
     g_signal_connect(scale, "value-changed", G_CALLBACK(on_sound_value_changed), label);
 
-    // Tạo thanh tiến trình
+
+    // Create progress bar
     progress_bar = gtk_progress_bar_new();
-    // Set size
-    gtk_widget_set_size_request(progress_bar, 1500, 6);
-    // Set vị trí
-    gtk_fixed_put(GTK_FIXED(fixed), progress_bar, 0, 662);
+    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar), progress);
+    gtk_widget_set_size_request(progress_bar, 560, 10);
+    gtk_fixed_put(GTK_FIXED(fixed), progress_bar,450, 769);
+
+    // Create time label
+    time_label = gtk_label_new(NULL);
+    gtk_label_set_text(GTK_LABEL(time_label), "00:00");
+    gtk_fixed_put(GTK_FIXED(fixed), time_label,400, 765);
+    // Hide stop button initially
+    gtk_widget_hide(stop_button);
+    // Update progress every 10ms
+    g_timeout_add(10, update_progress_bar, NULL);
 
     // Tạo lable để chứ tên bài hát và tên nghệ sĩ
     song_label = gtk_label_new("Song Name");
@@ -125,7 +136,7 @@ void create_MusicBar(GtkWidget* fixed) {
     GdkScreen *screen = gdk_display_get_default_screen (display);
     GError *error = NULL;
 
-    gtk_css_provider_load_from_path(provider, "D:\\mystic_melody\\src\\properties\\style.css", &error);
+    gtk_css_provider_load_from_path(provider, "D:\\mystic_melody\\src\\properties\\musicBar.css", &error);
     if (error)
     {
         g_warning ("%s", error->message);
@@ -134,36 +145,65 @@ void create_MusicBar(GtkWidget* fixed) {
     gtk_style_context_add_provider_for_screen(screen, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 }
 
-void play_song(GtkWidget *widget, gpointer data) {
-    // Ẩn play button và hiển thị stop button
-    gtk_widget_hide(play_button);
-    gtk_widget_show(stop_button);
-
-    // If the timer is not active, start a new timer
-    if (!timer_active) {
-        // Initialize the playback position to 0.0
-        playback_position = 0.0;
-
-        // Start the timer to update the progress bar every second
-        progress_timeout_id = g_timeout_add_seconds(1, (GSourceFunc)update_progress_bar, (gpointer) &playback_position);
-        timer_active = TRUE;
-    }
-    else {
-        // If the timer is already active, resume it by starting a new timer with the same interval
-        progress_timeout_id = g_timeout_add_seconds(1, (GSourceFunc)update_progress_bar, (gpointer) &playback_position);
+void toggle_stop_button() {
+    if (is_playing) {
+        gtk_widget_hide(play_button);
+        gtk_widget_show(stop_button);
+    } else {
+        gtk_widget_hide(stop_button);
+        gtk_widget_show(play_button);
     }
 }
 
 void stop_song(GtkWidget *widget, gpointer data) {
-    g_print("Stopping song...\n");
-    gtk_widget_hide(stop_button);
-    gtk_widget_show(play_button);
+    is_playing = FALSE;
+    toggle_stop_button();
 
-    // Stop the timer that updates the progress bar
-    if (timer_active) {
-        g_source_remove(progress_timeout_id);
-        timer_active = FALSE;
+    // Store the elapsed time and progress in variables
+    stored_elapsed_seconds_global = song_duration * progress;
+    stored_progress_global = progress;
+
+    // Reset progress and elapsed time variables
+    progress = 0.0;
+    elapsed_seconds = 0;
+
+    // Update progress bar with stored progress value
+    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar), stored_progress_global);
+
+    // Update time label with stored elapsed time
+    gchar *time_str = g_strdup_printf("%02d:%02d", stored_elapsed_seconds_global / 60, stored_elapsed_seconds_global % 60);
+    gtk_label_set_text(GTK_LABEL(time_label), time_str);
+    g_free(time_str);
+}
+
+void play_song(GtkWidget *widget, gpointer data) {
+    if (!is_playing) {
+        if (stored_elapsed_seconds_global >= song_duration) { // Reset progress and elapsed time if song has ended
+            progress = 0.0;
+            elapsed_seconds = 0;
+            gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar), progress);
+            gchar *time_str = g_strdup_printf("%02d:%02d", 0, 0);
+            gtk_label_set_text(GTK_LABEL(time_label), time_str);
+            g_free(time_str);
+        } else if (stored_elapsed_seconds_global > 0) { // Resume from stored progress and elapsed time
+            progress = stored_progress_global;
+            elapsed_seconds = stored_elapsed_seconds_global;
+
+            // Update progress bar with stored progress value
+            gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar), progress);
+
+            // Update time label with stored elapsed time
+            gint minutes = elapsed_seconds / 60;
+            gint seconds = elapsed_seconds % 60;
+            gchar *time_str = g_strdup_printf("%02d:%02d", minutes, seconds);
+            gtk_label_set_text(GTK_LABEL(time_label), time_str);
+            g_free(time_str);
+        }
+        is_playing = TRUE;
+    } else {
+        is_playing = FALSE;
     }
+    toggle_stop_button();
 }
 
 void back_song(GtkWidget *widget, gpointer data) {
@@ -180,7 +220,7 @@ void on_draw_event(GtkWidget *widget, cairo_t *cr, gpointer user_data) {
     cairo_set_source_rgb(cr, 25/255.0, 25/255.0, 24/255.0);// fill color
 
     // Bắt đầu vẽ hcn
-    cairo_rectangle(cr, 0, 0, 1500, 120);
+    cairo_rectangle(cr, 0, 0, 1500, 140);
     cairo_fill_preserve(cr); // fill the rectangle
 }
 
@@ -189,33 +229,39 @@ static void on_sound_value_changed(GtkWidget *range, gpointer data) {
     gdouble sound_value = gtk_range_get_value(range);
 
     // Update lable để lấy giá trị hiện tại của âm thanh
-    gchar *label_text = g_strdup_printf("Sound: %.2f", sound_value);
+    gchar *label_text = g_strdup_printf("Sound: %.0f", sound_value);
     gtk_label_set_text(GTK_LABEL(data), label_text);
     g_free(label_text);
 }
 
 
 gboolean update_progress_bar(gpointer data) {
-// Cast the user data pointer to a playback position variable
-    gdouble* playback_position_ptr = (gdouble*) data;
-    gdouble playback_position = *playback_position_ptr;
+    if (is_playing) {
+        // Update progress
+        progress += 0.00006;
+        gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar), progress);
 
-    // Update the playback position by 1 second
-    playback_position += 1.0;
+        // Update elapsed time
+        elapsed_seconds = progress * song_duration;
+        gint minutes = elapsed_seconds / 60;
+        gint seconds = elapsed_seconds % 60;
+        gchar *time_str = g_strdup_printf("%02d:%02d", minutes, seconds);
+        gtk_label_set_text(GTK_LABEL(time_label), time_str);
+        g_free(time_str);
 
-    // Calculate the progress bar fraction and text
-    double fraction = playback_position / song_length * 100.0;
-    char text[32];
-    snprintf(text, sizeof(text), "%.0f%%", fraction);
-
-    // Update the progress bar value and text
-    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar), fraction / 100.0);
-    gtk_progress_bar_set_text(GTK_PROGRESS_BAR(progress_bar), text);
-
-    // Store the updated playback position back in the user data pointer
-    *playback_position_ptr = playback_position;
-
-    return G_SOURCE_CONTINUE; // continue the timer
+        // Stop playback at end of song
+        if (elapsed_seconds >= song_duration) {
+            is_playing = FALSE;
+            toggle_stop_button();
+            progress = 0.0;
+            elapsed_seconds = 0;
+            gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar), progress);
+            time_str = g_strdup_printf("%02d:%02d", 0, 0);
+            gtk_label_set_text(GTK_LABEL(time_label), time_str);
+            g_free(time_str);
+        }
+    }
+    return TRUE;
 }
 
 

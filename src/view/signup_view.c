@@ -60,6 +60,7 @@ void sign_up_show()
     // Tạo cửa sổ
     sign_up_window= gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title(GTK_WINDOW(sign_up_window), "Signup");
+    gtk_window_set_decorated(GTK_WINDOW(sign_up_window), FALSE);
     gtk_window_set_default_size(GTK_WINDOW(sign_up_window), 500,700);
     gtk_window_set_position(GTK_WINDOW(sign_up_window), GTK_WIN_POS_CENTER);
     gtk_window_set_resizable(GTK_WINDOW(sign_up_window), FALSE);

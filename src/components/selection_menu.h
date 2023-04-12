@@ -6,6 +6,8 @@
 #define MUSIC_SELECTION_MENU_H
 
 #include <gtk/gtk.h>
+
+
 void on_draw_menu(GtkWidget *widget, cairo_t *cr, gpointer user_data);
 
 void create_selection_menu(GtkWidget *fixed) {
@@ -13,7 +15,7 @@ void create_selection_menu(GtkWidget *fixed) {
     // Tạo một hình chữ nhật để chứa toàn bộ Widget
     GtkWidget *rect_area = gtk_drawing_area_new();
     // Set size và vị trí cho hình chữ nhật
-    gtk_widget_set_size_request(rect_area,300 , 663);
+    gtk_widget_set_size_request(rect_area,300 , 680);
     gtk_fixed_put(GTK_FIXED(fixed), rect_area, 0, 0);
     // bắt đầu vẽ hình chữ nhật
     g_signal_connect(rect_area, "draw", G_CALLBACK(on_draw_menu), NULL);
@@ -45,7 +47,7 @@ void create_selection_menu(GtkWidget *fixed) {
 
     // Khởi tạo Logo của app ở đỉnh của selection menu
     GtkWidget *logo = gtk_image_new_from_file("assets/header_logo.png");
-    gtk_fixed_put(GTK_FIXED(fixed), logo, 50, 0);
+    gtk_fixed_put(GTK_FIXED(fixed), logo, 20, 0);
 
     // Khởi tạo các icon của từng mục
     GtkWidget *explore_icon = gtk_image_new_from_file("assets/explore_icon.png");

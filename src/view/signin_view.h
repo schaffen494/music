@@ -6,6 +6,7 @@
 #define C_SIG_NIN_VIEW_H
 #include <unistd.h>
 #include <gtk/gtk.h>
+#include <string.h>
 extern GtkWidget *username_entry_login;
 extern GtkWidget *password_entry_login;
 extern GtkWidget *sign_in_window;

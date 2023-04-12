@@ -29,18 +29,14 @@ add_executable(${PROJECT_NAME}
         src/view/mainboard_view.c
         src/view/mainboard_view.h
         src/components/selection_menu.h
-        src/components/my_music.h
         src/components/header_app.h
         src/components/musicBar.c
         src/components/musicBar.h
         src/models/songs.c
         src/models/songs.h
-        src/models/albums.c
-        src/models/albums.h
         src/models/playlist.c
         src/models/playlist.h
-        src/components/content.h
-        src/components/ts.h src/components/tri.c src/components/tri.h src/components/searchBar.c src/components/searchBar.h)
+        src/components/searchBar.c src/components/searchBar.h src/components/main_content.h)
 
 target_link_libraries(${PROJECT_NAME} ${GTK3_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${SQLITE3_LIBRARY})

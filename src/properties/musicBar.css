@@ -1,0 +1,47 @@
+button
+{
+    color: #c5c5c5;
+    font-size: 20px;
+    background-image: none;
+    border-radius: 0px;
+}
+
+button:active
+{
+    color: white;
+    background-color: #424242;
+}
+
+button:focus
+{
+    color: white;
+    background-color: #424242;
+}
+
+/* Set the background color of the progress bar */
+progressbar {
+    background-color: #5f5e5f;
+}
+
+/* Set the color of the progress bar fill */
+progressbar > trough > progress {
+    background-color: white;
+}
+
+/* Set the color of the progress bar text */
+progressbar > .text {
+    color: white;
+}
+
+/* Set the font size and color of the song name label */
+#song-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Set the font size and color of the artist name label */
+#artist-label {
+    font-size: 18px;
+    color: white;
+}
