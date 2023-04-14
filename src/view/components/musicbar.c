@@ -96,9 +96,11 @@ void create_MusicBar(GtkWidget* fixed) {
 
 void toggle_stop_button() {
     if (is_playing) {
+        play_music(song_name_tmp);
         gtk_widget_hide(play_button);
         gtk_widget_show(stop_button);
     } else {
+        stop_music();
         gtk_widget_hide(stop_button);
         gtk_widget_show(play_button);
     }

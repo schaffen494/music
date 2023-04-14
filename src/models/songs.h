@@ -19,4 +19,5 @@ void create_list_song(GtkWidget *list);
 int explorer();
 int my_music_create(GtkWidget *list);
 void play_music();
+void stop_music();
 #endif //C_SONGS_H

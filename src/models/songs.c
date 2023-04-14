@@ -90,7 +90,10 @@ int explorer()
 
 void play_music(char song_name_play[])
 {
-    printf("%s",song_name_play);
+
+    // Đóng tập tin nhạc
+    mciSendString("close music", NULL, 0, NULL);
+
     strcpy(music,"open \"");
     strcat(music,absolute_project);
     strcat(music,"\\database\\sound\\");
@@ -98,6 +101,7 @@ void play_music(char song_name_play[])
     strcat(music,".mp3");
     strcat(music,"\" type mpegvideo alias music");
 
+    printf("%s",music);
     // Mở tập tin nhạc
     mciSendString(music, NULL, 0, NULL);
 
@@ -107,10 +111,11 @@ void play_music(char song_name_play[])
     // Tiếp tục phát nhạc
     mciSendString("play music", NULL, 0, NULL);
 
-
 }
 void stop_music()
 {
+    // Đóng tập tin nhạc
+    mciSendString("close music", NULL, 0, NULL);
 
 }
 int qr_plalist();

@@ -204,7 +204,6 @@ void on_row_selected(GtkListBox *listbox, GtkListBoxRow *row, gpointer user_data
 {
     if(tab!=3)
     {
-
         // Lấy vị trí của dòng được chọn
         gint index = gtk_list_box_row_get_index(row);
         //g_print("Selected row: %d\n", index);
