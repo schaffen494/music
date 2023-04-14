@@ -1,7 +1,8 @@
 #include <gtk/gtk.h>
 #include "src/config/database_config.h"
-#include "src/view/intro_view.h"
-
+#include "src/view/main_view/intro_view.h"
+#include "src/view/main_view/mainboard_view.h"
+#include "src/models/songs.h"
 int main(int argc, char *argv[]) {
 
     //get link database and project
@@ -12,7 +13,7 @@ int main(int argc, char *argv[]) {
 
     //show intro window
     intro_show();
+    //main_board_show();
     return 0;
 }
-
 

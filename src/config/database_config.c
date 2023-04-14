@@ -20,5 +20,4 @@ void set_path()
     strcat(absolute_path, "\\");
     strcat(absolute_path, path); // Append file name to directory path
 
-    printf("Absolute path to music.db: %s\n", absolute_path);
 }

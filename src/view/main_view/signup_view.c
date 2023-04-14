@@ -4,10 +4,13 @@
 
 #include "signup_view.h"
 #include "src/models/users.h"
-#include "src/view/mainboard_view.h"
+#include "src/view/main_view/mainboard_view.h"
+#include "src/view/main_view/signin_view.h"
 GtkWidget *username_entry_signup;
 GtkWidget *password_entry_signup;
-GtkWidget *sign_up_window;
+GtkWidget *sign_up_window,*fixed2,
+        *button_register_register,*label_password_regis,
+        *image_logo_regis,*label_username_regis ;
 
 gboolean authenticate_user_sign_up(const char *username, const char *password)
 {
@@ -29,12 +32,12 @@ int sign_up_click(GtkWidget *widget, gpointer data)
                                         GTK_DIALOG_MODAL,
                                         GTK_MESSAGE_INFO,
                                         GTK_BUTTONS_OK,
-                                        "Đăng k thành công!");
+                                        "Đăng ký thành công!");
         gtk_window_set_decorated(GTK_WINDOW(dialog), FALSE);
         gtk_window_set_position(GTK_WINDOW(dialog), GTK_WIN_POS_CENTER);
         gtk_dialog_run(GTK_DIALOG(dialog));
         g_timeout_add_seconds(0, (GSourceFunc)gtk_widget_hide, sign_up_window);
-        g_timeout_add_seconds(0, (GSourceFunc)main_board_show, sign_up_window);
+        g_timeout_add_seconds(0, (GSourceFunc)sign_in_show, sign_up_window);
 
     } else {
         dialog = gtk_message_dialog_new(NULL,
@@ -73,48 +76,40 @@ void sign_up_show()
 
 
     // Tạo fixed container để set vị trí của các Widget
-    GtkWidget* fixed = gtk_fixed_new();
-    gtk_container_add(GTK_CONTAINER(sign_up_window), fixed);
+    fixed2 = gtk_fixed_new();
+    gtk_container_add(GTK_CONTAINER(sign_up_window), fixed2);
 
     // Tạo logo
-    GtkWidget *image_logo = gtk_image_new_from_file("assets/sign_in_logo.png");
-    gtk_fixed_put(GTK_FIXED(fixed), image_logo, 165, 20);
+    image_logo_regis = gtk_image_new_from_file("assets/sign_in_logo.png");
+    gtk_fixed_put(GTK_FIXED(fixed2), image_logo_regis, 165, 20);
 
     // Tạo label và entry cho tên đăng nhập
-    GtkWidget *label_username = gtk_label_new("Username:");
-    gtk_widget_set_name(label_username, "label_username");
+    label_username_regis = gtk_label_new("Username:");
+    gtk_widget_set_name(label_username_regis, "label_username");
     username_entry_signup= gtk_entry_new();
     gtk_widget_set_size_request(username_entry_signup, 400, 30);
     gtk_widget_set_name(username_entry_signup, "username_entry_login");
-    gtk_fixed_put(GTK_FIXED(fixed), label_username, 40, 222);
-    gtk_fixed_put(GTK_FIXED(fixed), username_entry_signup, 40, 250);
+    gtk_fixed_put(GTK_FIXED(fixed2), label_username_regis, 40, 222);
+    gtk_fixed_put(GTK_FIXED(fixed2), username_entry_signup, 40, 250);
 
     // Tạo label và entry cho mật khẩu
-    GtkWidget *label_password = gtk_label_new("Password:");
-    gtk_widget_set_name(label_password, "label_password");
+    label_password_regis = gtk_label_new("Password:");
+    gtk_widget_set_name(label_password_regis, "label_password");
     password_entry_signup = gtk_entry_new();
     gtk_widget_set_size_request(password_entry_signup, 400, 30);
     gtk_entry_set_visibility(GTK_ENTRY(password_entry_signup), FALSE);
-    gtk_fixed_put(GTK_FIXED(fixed), label_password, 40, 320);
-    gtk_fixed_put(GTK_FIXED(fixed), password_entry_signup, 40, 350);
+    gtk_fixed_put(GTK_FIXED(fixed2), label_password_regis, 40, 320);
+    gtk_fixed_put(GTK_FIXED(fixed2), password_entry_signup, 40, 350);
 
 
     // Tạo button đăng ký
-    GtkWidget *button_register = gtk_button_new_with_label("Register");
-    gtk_widget_set_name(button_register, "button_register");
-    g_signal_connect(button_register, "clicked", G_CALLBACK(sign_up_click), NULL);
-    gtk_widget_set_size_request(button_register, 400, 30);
-    gtk_fixed_put(GTK_FIXED(fixed), button_register, 40, 450);
+    button_register_register = gtk_button_new_with_label("Register");
+    gtk_widget_set_name(button_register_register, "button_register");
+    g_signal_connect(button_register_register, "clicked", G_CALLBACK(sign_up_click), NULL);
+    gtk_widget_set_size_request(button_register_register, 400, 30);
+    gtk_fixed_put(GTK_FIXED(fixed2),button_register_register, 40, 450);
 
-    // Thêm các buttons vào một hình chữ nhật
-    GtkWidget *box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
-    gtk_box_pack_start(GTK_BOX(box), label_username, FALSE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(box), username_entry_signup, FALSE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(box), label_password, FALSE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(box), password_entry_signup, FALSE, FALSE, 0);
 
-    gtk_box_pack_start(GTK_BOX(box), button_register, FALSE, FALSE, 0);
-    gtk_container_add(GTK_CONTAINER(fixed), box);
 
     //Load file css
     GtkCssProvider *provider = gtk_css_provider_new();

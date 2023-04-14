@@ -1,9 +1,12 @@
 //
-// Created by ADMIN on 4/6/2023.
+// Created by ADMIN on 4/13/2023.
 //
 
 #include "users.h"
 #include "src/config/database_config.h"
+
+#include <string.h>
+char username[PATH_MAX];
 
 sqlite3* db;
 sqlite3_stmt* stmt;
@@ -33,10 +36,12 @@ int check_sign_in(char username[],char password[])
     sqlite3_bind_text(stmt, 1, username, -1, SQLITE_STATIC);
     sqlite3_bind_text(stmt, 2, password, -1, SQLITE_STATIC);
 
+
     // Thực hiện truy vấn
     rc = sqlite3_step(stmt);
 
     if (rc == SQLITE_ROW) {
+
         sqlite3_finalize(stmt);
         sqlite3_close(db);
         return LOGIN_OK;
