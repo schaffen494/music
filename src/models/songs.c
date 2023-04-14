@@ -9,16 +9,11 @@
 #include <string.h>
 #pragma comment(lib, "winmm.lib")
 #include "src/config/database_config.h"
-
+#include "src/models/infor.h"
 
 int so_bai_hat = 0;
-typedef struct {
-    gchar *image_path;
-    gchar *song_title;
-    gchar *artist;
-    gchar *times;
-} Song;
 char music[PATH_MAX];
+
 Song songs[PATH_MAX];
 int explorer();
 void create_list_song(GtkWidget *list) {
@@ -47,7 +42,7 @@ void create_list_song(GtkWidget *list) {
         gtk_box_pack_start(GTK_BOX(hbox), time, TRUE,TRUE, 0);
         gtk_widget_set_halign(time, GTK_ALIGN_END); // căn lề phải
         gtk_widget_set_margin_end(time, 200); // thêm lề phải 200px
-        gtk_list_box_insert(GTK_LIST_BOX(list), hbox, 0);
+        gtk_list_box_insert(GTK_LIST_BOX(list), hbox, -1);
 
     }
 }
@@ -93,26 +88,30 @@ int explorer()
 
 }
 
-void play_music()
+void play_music(char song_name_play[])
 {
-
+    printf("%s",song_name_play);
     strcpy(music,"open \"");
     strcat(music,absolute_project);
     strcat(music,"\\database\\sound\\");
-    strcat(music,"song_id");
+    strcat(music,song_name_play);
     strcat(music,".mp3");
     strcat(music,"\" type mpegvideo alias music");
 
     // Mở tập tin nhạc
     mciSendString(music, NULL, 0, NULL);
 
+    // Tua đến thời điểm 30 giây
+    mciSendString("seek music to 00000", NULL, 0, NULL);
 
+    // Tiếp tục phát nhạc
     mciSendString("play music", NULL, 0, NULL);
+
+
 }
 void stop_music()
 {
-    mciSendString("stop music", NULL, 0, NULL);
-    mciSendString("close music", NULL, 0, NULL);
+
 }
 int qr_plalist();
 int my_music_create(GtkWidget *list)
@@ -162,7 +161,7 @@ int qr_plalist()
     sqlite3_stmt *stmt;
 
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, 0);
-    sqlite3_bind_text(stmt, 1, "1", -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 1, id_user_tmp, -1, SQLITE_STATIC);
     so_bai_hat=0;
     if (rc == SQLITE_OK) {
         while (sqlite3_step(stmt) == SQLITE_ROW) {

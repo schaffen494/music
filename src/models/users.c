@@ -4,7 +4,7 @@
 
 #include "users.h"
 #include "src/config/database_config.h"
-
+#include "src/models/infor.h"
 #include <string.h>
 char username[PATH_MAX];
 
@@ -41,7 +41,7 @@ int check_sign_in(char username[],char password[])
     rc = sqlite3_step(stmt);
 
     if (rc == SQLITE_ROW) {
-
+        strcpy(id_user_tmp,username);
         sqlite3_finalize(stmt);
         sqlite3_close(db);
         return LOGIN_OK;

@@ -9,6 +9,8 @@
 #include <glib-object.h>
 #include <math.h>
 
+extern GtkWidget  *time_label, *song_label, *artist_label,*image;
+
 void create_MusicBar(GtkWidget* fixed);
 
 #endif //MUSIC_MUSICBAR_H

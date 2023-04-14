@@ -8,7 +8,7 @@
 #include <mmsystem.h>
 #pragma comment(lib, "winmm.lib")
 #include "src/config/database_config.h"
-#include "src/view/main_view/signin_view.h"
+#include "src/models/infor.h"
 int dem =0;
 typedef struct {
     gchar *image_path;
@@ -56,7 +56,7 @@ int add_playlist()
     sqlite3_stmt *stmt;
 
     rc = sqlite3_prepare_v2(db, sql, -1, &stmt, 0);
-    sqlite3_bind_text(stmt, 1, "lap", -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 1, id_user_tmp, -1, SQLITE_STATIC);
     dem=0;
     if (rc == SQLITE_OK) {
         while (sqlite3_step(stmt) == SQLITE_ROW) {

@@ -5,8 +5,14 @@
 #include "searchBar.h"
 
 #include <gtk/gtk.h>
+#include "src/view/main_view/signin_view.h"
+#include "src/view/main_view/mainboard_view.h"
+void logout_click()
+{
+    g_timeout_add_seconds(0, (GSourceFunc)gtk_widget_hide, main_board_window);
+    g_timeout_add_seconds(0, (GSourceFunc)sign_in_show, main_board_window);
 
-
+}
 int searchBar(GtkWidget *fixed) {
 
     // Tạo entry widget
@@ -31,6 +37,7 @@ int searchBar(GtkWidget *fixed) {
     GtkImage *image_skip1 = gtk_image_new_from_pixbuf(pixbuf_skip1);
     gtk_button_set_image(GTK_BUTTON(logout), GTK_WIDGET(image_skip1));
     gtk_widget_show(image_skip1);
+    g_signal_connect(logout, "clicked", G_CALLBACK(logout_click), NULL);
 
     return 0;
 }

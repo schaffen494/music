@@ -50,7 +50,7 @@ void intro_show()
     // release GTK CSS provider
     g_object_unref (provider);
     //change intro_window
-    g_timeout_add_seconds(2, (GSourceFunc)gtk_widget_destroy, intro_window);
-    g_timeout_add_seconds(2, (GSourceFunc)sign_in_show, intro_window);
+    g_timeout_add_seconds(0, (GSourceFunc)gtk_widget_destroy, intro_window);
+    g_timeout_add_seconds(0, (GSourceFunc)sign_in_show, intro_window);
     gtk_main();
 }

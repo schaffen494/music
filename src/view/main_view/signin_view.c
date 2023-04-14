@@ -39,10 +39,10 @@ int login_clicked(GtkWidget *widget, gpointer data) {
         gtk_window_set_position(GTK_WINDOW(dialog), GTK_WIN_POS_CENTER);
         gtk_dialog_run(GTK_DIALOG(dialog));
         g_timeout_add_seconds(0, (GSourceFunc)gtk_widget_destroy, dialog);
-        g_timeout_add_seconds(0, (GSourceFunc)main_board_show, sign_in_window);
         gtk_entry_set_text(username_entry_login, "");
         gtk_entry_set_text(password_entry_login, "");
         return 1;
+
     }
     else
     {
@@ -177,7 +177,6 @@ void sign_in_show(){
 
     // show window
     gtk_widget_show_all(sign_in_window);
-
     // event to close window
     g_signal_connect(G_OBJECT(sign_in_window), "destroy", G_CALLBACK(exit), NULL);
 
