@@ -7,11 +7,15 @@
 #include "src/models/playlist.h"
 #include "src/view/main_view/mainboard_view.h"
 #include "src/view/components/musicbar.h"
-
+#include "src/config/database_config.h"
+#include "src/models/infor.h"
 GtkWidget *scrolled_window,*rect_area,*upload,*explore,*my_music,*logo,*explore_icon,*my_music_icon,*upload_icon;
-GtkWidget *list;
+GtkWidget *post_song_window,*list;
+
+GtkWidget *link_song,*art;
 GtkWidget *select;
 GtkWidget *add;
+char song_name_add[PATH_MAX];
 char song_name_tmp[PATH_MAX];
 char artist_name_tmp[PATH_MAX];
 int tab=0;
@@ -20,29 +24,6 @@ void select_click()
     printf("ok");
 }
 void on_draw_menu(GtkWidget *widget, cairo_t *cr, gpointer user_data);
-
-gboolean on_draw_circle(GtkWidget *widget, cairo_t *cr, gpointer data) {
-    // Lấy kích thước của DrawingArea
-    gint width, height;
-    gtk_widget_get_size_request(widget, &width, &height);
-
-    // Tạo đường tròn
-    cairo_arc(cr, width/2.0, height/2.0, 20.5, 0, 2 * G_PI);
-
-    // Tô màu đường tròn
-    cairo_set_source_rgb(cr, 217.0/255.0, 217.0/255.0, 217.0/255.0);
-    cairo_fill(cr);
-
-    // Vẽ dấu cộng
-    cairo_set_source_rgb(cr, 112.0/255.0, 112.0/255.0, 112.0/255.0);
-    cairo_move_to(cr, width/2.0 - 10, height/2.0);
-    cairo_line_to(cr, width/2.0 + 10, height/2.0);
-    cairo_move_to(cr, width/2.0, height/2.0 - 10);
-    cairo_line_to(cr, width/2.0, height/2.0 + 10);
-    cairo_stroke(cr);
-
-    return TRUE;
-}
 
 void tab_explore()
 {
@@ -70,9 +51,9 @@ void tab_explore()
     // Cập nhật lại giao diện của GtkListBox
     gtk_widget_show_all(list);
 }
+
 void tab_my_music()
 {
-
     tab =2;
     // Xóa tất cả các phần tử trong GtkListBox
     gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
@@ -130,39 +111,41 @@ void tab_playlist()
 
 }
 
-void file_chooser_dialog(GtkWidget *widget, gpointer data) {
-    GtkWidget *dialog;
-    GtkFileFilter *filter;
-    gint res;
+void copy_file(const char *src_path, const char *dest_path)
+{
+    FILE *src_file, *dest_file;
+    char buffer[1024];
+    size_t bytes_read;
 
-    // Tạo hộp thoại chọn file
-    dialog = gtk_file_chooser_dialog_new("Open File",
-                                         GTK_WINDOW(data),
-                                         GTK_FILE_CHOOSER_ACTION_OPEN,
-                                         "Cancel",
-                                         GTK_RESPONSE_CANCEL,
-                                         "Open",
-                                         GTK_RESPONSE_ACCEPT,
-                                         NULL);
+    src_file = fopen(src_path, "rb");
+    dest_file = fopen(dest_path, "wb");
 
-    // Thêm bộ lọc file
-    filter = gtk_file_filter_new();
-    gtk_file_filter_set_name(filter, "C Source Files");
-    gtk_file_filter_add_pattern(filter, "*.c");
-    gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(dialog), filter);
-
-    // Hiển thị hộp thoại và xử lý kết quả
-    res = gtk_dialog_run(GTK_DIALOG(dialog));
-    if (res == GTK_RESPONSE_ACCEPT) {
-        char *filename;
-        GtkFileChooser *chooser = GTK_FILE_CHOOSER(dialog);
-        filename = gtk_file_chooser_get_filename(chooser);
-        g_print("Selected file: %s\n", filename);
-        g_free(filename);
+    while ((bytes_read = fread(buffer, 1, sizeof(buffer), src_file)) > 0) {
+        fwrite(buffer, 1, bytes_read, dest_file);
     }
 
-    // Đóng hộp thoại
-    gtk_widget_destroy(dialog);
+    fclose(src_file);
+    fclose(dest_file);
+}
+
+void button_clicked(GtkWidget *widget, gpointer data)
+{
+
+    const char *name = gtk_entry_get_text(GTK_ENTRY(link_song));
+    const char *artist = gtk_entry_get_text(GTK_ENTRY(art));
+    if(add_song(name,artist,id_user_tmp)==ADD_OK);
+    {
+        const char *src_path = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(data));
+        const char dest_path[PATH_MAX];
+        strcpy(dest_path,absolute_project);
+        strcat(dest_path,"\\database\\sound\\");
+        strcat(dest_path,name);
+        strcat(dest_path,".mp3");
+        copy_file(src_path, dest_path);
+        gtk_widget_destroy(post_song_window);
+    }
+
+
 }
 
 void add_click()
@@ -173,25 +156,47 @@ void add_click()
     }
     if(tab ==2)
     {
-        GtkWidget *window, *button_box, *button;
-        // Tạo cửa sổ
-        window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-        gtk_window_set_title(GTK_WINDOW(window), "File Chooser Dialog");
-        gtk_container_set_border_width(GTK_CONTAINER(window), 10);
+        GtkWidget *grid, *filechooser, *button, *label;
+        post_song_window= gtk_window_new(GTK_WINDOW_TOPLEVEL);
+        gtk_window_set_title(GTK_WINDOW(post_song_window), "Copy MP3 File");
+        gtk_window_set_default_size(GTK_WINDOW(post_song_window), 200, 100);
+        GdkRGBA color;
+        gdk_rgba_parse(&color, "#1f1f1e");
+        gtk_widget_override_background_color(post_song_window, GTK_STATE_FLAG_NORMAL, &color);
 
-        // Tạo hộp chứa nút
-        button_box = gtk_button_box_new(GTK_ORIENTATION_HORIZONTAL);
-        gtk_container_add(GTK_CONTAINER(window), button_box);
+        gtk_window_set_decorated(GTK_WINDOW(post_song_window), FALSE);
+        gtk_window_set_position(GTK_WINDOW(post_song_window), GTK_WIN_POS_CENTER_ALWAYS);
+        grid = gtk_grid_new();
+        gtk_container_add(GTK_CONTAINER(post_song_window), grid);
 
-        // Tạo nút mở hộp thoại chọn file
-        button = gtk_button_new_with_label("Open File");
-        g_signal_connect(button, "clicked", G_CALLBACK(file_chooser_dialog), window);
-        gtk_container_add(GTK_CONTAINER(button_box), button);
+        GdkRGBA color1;
+        gdk_rgba_parse(&color1, "#ffffff");
+        GtkWidget *link_song_label = gtk_label_new("Name of song");
+        gtk_widget_override_color(link_song_label, GTK_STATE_FLAG_NORMAL, &color1);
+        gtk_grid_attach(GTK_GRID(grid), link_song_label, 0, 0, 1, 1);
+        link_song= gtk_entry_new();
+        gtk_grid_attach(GTK_GRID(grid), link_song, 0, 1, 1, 1);
 
-        // Hiển thị cửa sổ
-        gtk_widget_show_all(window);
+        GtkWidget *link_song_label1 = gtk_label_new("Artist");
+        gtk_widget_override_color(link_song_label1, GTK_STATE_FLAG_NORMAL, &color1);
+        gtk_grid_attach(GTK_GRID(grid), link_song_label1, 0, 2, 1, 1);
+        art = gtk_entry_new();
+        gtk_grid_attach(GTK_GRID(grid), art, 0, 3, 1, 1);
+        filechooser = gtk_file_chooser_button_new("Select a File", GTK_FILE_CHOOSER_ACTION_OPEN);
+        gtk_grid_attach(GTK_GRID(grid), filechooser, 0, 4, 1, 1);
 
-        // Chạy vòng lặp sự kiện GTK
+        button = gtk_button_new_with_label("Add song");
+        g_signal_connect(button, "clicked", G_CALLBACK(button_clicked), filechooser);
+        gtk_grid_attach(GTK_GRID(grid), button, 0, 5, 1, 1);
+
+        label = gtk_label_new("");
+        gtk_grid_attach(GTK_GRID(grid), label, 0, 6, 1, 1);
+        //Load file css
+        GtkCssProvider *provider = gtk_css_provider_new();
+        GdkDisplay *display = gdk_display_get_default ();
+        GdkScreen *screen = gdk_display_get_default_screen (display);
+        GError *error = NULL;
+        gtk_widget_show_all(post_song_window);
         gtk_main();
     }
     if(tab ==3)
@@ -224,7 +229,10 @@ void on_row_selected(GtkListBox *listbox, GtkListBoxRow *row, gpointer user_data
     }
     else
     {
-
+        // Xóa tất cả các phần tử trong GtkListBox
+        gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
+        my_music_playlist(list);
+        gtk_widget_show_all(list);
     }
 
 }

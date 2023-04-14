@@ -6,6 +6,7 @@
 #include "src/models/users.h"
 #include "src/view/main_view/signup_view.h"
 #include "src/view/main_view/mainboard_view.h"
+#include "src/models/infor.h"
 GtkWidget *username_entry_login,*label_username,*image_logo,*label_password,*button_login,*button_register;
 GtkWidget *password_entry_login;
 GtkWidget *sign_in_window;
@@ -56,6 +57,7 @@ int login_clicked(GtkWidget *widget, gpointer data) {
             gtk_window_set_decorated(GTK_WINDOW(dialog), FALSE);
             gtk_window_set_position(GTK_WINDOW(dialog), GTK_WIN_POS_CENTER);
             gtk_dialog_run(GTK_DIALOG(dialog));
+            strcpy(id_user_tmp,username);
             g_timeout_add_seconds(0, (GSourceFunc)gtk_widget_hide, sign_in_window);
             g_timeout_add_seconds(0, (GSourceFunc)main_board_show, sign_in_window);
 

@@ -98,6 +98,7 @@ void sign_up_show()
     password_entry_signup = gtk_entry_new();
     gtk_widget_set_size_request(password_entry_signup, 400, 30);
     gtk_entry_set_visibility(GTK_ENTRY(password_entry_signup), FALSE);
+    gtk_widget_set_name(password_entry_signup, "password_entry_login");
     gtk_fixed_put(GTK_FIXED(fixed2), label_password_regis, 40, 320);
     gtk_fixed_put(GTK_FIXED(fixed2), password_entry_signup, 40, 350);
 

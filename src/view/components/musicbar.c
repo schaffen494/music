@@ -37,6 +37,7 @@ void create_MusicBar(GtkWidget* fixed) {
     GdkPixbuf *pixbuf_play = gdk_pixbuf_new_from_file("assets/play_button.svg", NULL);
     GtkImage *image_play = gtk_image_new_from_pixbuf(pixbuf_play);
     gtk_button_set_image(GTK_BUTTON(play_button), GTK_WIDGET(image_play));
+    gtk_widget_show(image_play );
 
 
     // Khởi tạo nút dừng nhạc
