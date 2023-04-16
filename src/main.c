@@ -1,8 +1,7 @@
 #include <gtk/gtk.h>
 #include "src/config/database_config.h"
 #include "src/view/main_view/intro_view.h"
-#include "src/view/main_view/mainboard_view.h"
-#include "src/models/songs.h"
+
 int main(int argc, char *argv[]) {
 
     //get link database and project

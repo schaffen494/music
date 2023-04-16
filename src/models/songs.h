@@ -18,11 +18,13 @@ typedef struct {
 } Song;
 extern int so_bai_hat;
 extern Song songs[PATH_MAX];
+extern Song found[PATH_MAX];
 void create_list_song(GtkWidget *list);
 int explorer();
 int my_music_create(GtkWidget *list);
 void play_music();
 void stop_music();
+void create_list_found(GtkWidget *list,char name[]);
 int my_music_playlist(GtkWidget *list);
 int add_song(char name[],char artist[],char user[]);
 #endif //C_SONGS_H

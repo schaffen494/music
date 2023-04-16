@@ -19,6 +19,20 @@ char song_name_add[PATH_MAX];
 char song_name_tmp[PATH_MAX];
 char artist_name_tmp[PATH_MAX];
 int tab=0;
+void show_found(char name[])
+{
+    // Xóa tất cả các phần tử trong GtkListBox
+    gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
+    GdkRGBA color1  ;
+    gdk_rgba_parse(&color1, "white");
+
+    // Thay đổi nội dung label
+    gtk_label_set_text(GTK_LABEL(select), "Found");
+    gtk_widget_override_color(select, GTK_STATE_NORMAL, &color1);
+
+    create_list_found(list,name);
+    gtk_widget_show_all(list);
+}
 void select_click()
 {
     printf("ok");
@@ -229,10 +243,7 @@ void on_row_selected(GtkListBox *listbox, GtkListBoxRow *row, gpointer user_data
     }
     else
     {
-        // Xóa tất cả các phần tử trong GtkListBox
-        gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
-        my_music_playlist(list);
-        gtk_widget_show_all(list);
+
     }
 
 }

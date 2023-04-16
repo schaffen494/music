@@ -7,16 +7,24 @@
 #include <gtk/gtk.h>
 #include "src/view/main_view/signin_view.h"
 #include "src/view/main_view/mainboard_view.h"
+#include "src/view/components/menu.h"
+#include "src/models/songs.h"
+GtkWidget *entry;
 void logout_click()
 {
     g_timeout_add_seconds(0, (GSourceFunc)gtk_widget_hide, main_board_window);
     g_timeout_add_seconds(0, (GSourceFunc)sign_in_show, main_board_window);
 
 }
+void search_song()
+{
+    const char *name = gtk_entry_get_text(GTK_ENTRY(entry));
+    show_found(name);
+}
 int searchBar(GtkWidget *fixed) {
 
     // Tạo entry widget
-    GtkWidget *entry = gtk_entry_new();
+    entry = gtk_entry_new();
     gtk_widget_set_size_request(entry, 463, 37);
     gtk_fixed_put(GTK_FIXED(fixed), entry, 410, 30);
 
@@ -28,6 +36,7 @@ int searchBar(GtkWidget *fixed) {
     GtkImage *image_skip = gtk_image_new_from_pixbuf(pixbuf_skip);
     gtk_button_set_image(GTK_BUTTON(search), GTK_WIDGET(image_skip));
     gtk_widget_show(image_skip);
+    g_signal_connect(search, "clicked", G_CALLBACK(search_song), NULL);
 
     // Khởi tạo nút log out
     GtkWidget *logout = gtk_button_new_with_label("");
