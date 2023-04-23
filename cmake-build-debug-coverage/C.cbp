@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="C"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/mystic_melody/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="C">
+				<Option output="D:/mystic_melody/cmake-build-debug-coverage/C.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/mystic_melody/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLIBDEFLATE_DLL"/>
+					<Add directory="D:/mystic_melody/cmake-build-debug-coverage"/>
+					<Add directory="D:/mystic_melody"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/gtk-3.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/pango-1.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/glib-2.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/glib-2.0/include"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/harfbuzz"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/freetype2"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/libpng16"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/fribidi"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/cairo"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/pixman-1"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/gdk-pixbuf-2.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/webp"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/atk-1.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include/c++/12.2.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include/c++/12.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include/c++/12.2.0/backward"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 C"/>
+					<CompileFile command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="C/fast">
+				<Option output="D:/mystic_melody/cmake-build-debug-coverage/C.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/mystic_melody/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DLIBDEFLATE_DLL"/>
+					<Add directory="D:/mystic_melody/cmake-build-debug-coverage"/>
+					<Add directory="D:/mystic_melody"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/gtk-3.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/pango-1.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/glib-2.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/glib-2.0/include"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/harfbuzz"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/freetype2"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/libpng16"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/fribidi"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/cairo"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/pixman-1"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/gdk-pixbuf-2.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/webp"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../include/atk-1.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include/c++/12.2.0"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include/c++/12.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include/c++/12.2.0/backward"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../include"/>
+					<Add directory="C:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 C/fast"/>
+					<CompileFile command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/mystic_melody/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/mystic_melody/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/mystic_melody/src/config/database_config.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/config/database_config.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/control/main_board_control.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/control/main_board_control.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/control/sign_in_control.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/control/sign_in_control.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/control/sign_up_control.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/control/sign_up_control.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/main.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/models/playlist.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/models/playlist.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/models/songs.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/models/songs.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/models/users.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/models/users.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/add_playlist.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/add_playlist.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/menu.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/menu.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/music_bar.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/music_bar.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/search_bar.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/search_bar.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/upload.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/upload.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/intro_view.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/intro_view.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/main_board_view.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/main_board_view.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/sign_in_view.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/sign_in_view.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/sign_up_view.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/sign_up_view.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

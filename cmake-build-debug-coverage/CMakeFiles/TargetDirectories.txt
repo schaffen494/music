@@ -1,0 +1,3 @@
+D:/mystic_melody/cmake-build-debug-coverage/CMakeFiles/C.dir
+D:/mystic_melody/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+D:/mystic_melody/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="C" targetName="C" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+      <configuration PROFILE_NAME="Debug-Coverage" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e89b78f8-e70c-4879-b648-6ef516eb64b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/logout.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/play_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/search_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/stop_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/main_board_control.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/main_board_control.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/sign_in_control.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/sign_in_control.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/sign_up_control.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/control/sign_up_control.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/add_playlist.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/add_playlist.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/music_bar.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/music_bar.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/search_bar.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/search_bar.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/upload.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/components/upload.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/intro_view.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/main_board_view.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/main_board_view.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/properties/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/sign_in_view.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/sign_in_view.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/sign_up_view.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/sign_up_view.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/music.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/music.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/database_config.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/database_config.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/database_config.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/database_config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/infor.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/infor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/playlist.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playlist.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/playlist.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/playlist.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/songs.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/songs.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/songs.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/songs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/users.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/users.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/users.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/users.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/menu.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/menu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/components/menu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/musicbar.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/musicbar.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/searchBar.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/components/searchBar.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/main_view/intro_view.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/main_view/intro_view.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/intro_view.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/main_view/mainboard_view.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/main_view/mainboard_view.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/main_view/signin_view.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/main_view/signin_view.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/main_view/signup_view.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/main_view/signup_view.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/properties/selection_menu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/properties/sign_in.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/properties/sign_in.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/properties/sign_up.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/properties/sign_up.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2O0LMTkwwHZU2hhNF5FGeS7SDzT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\mystic_melody\assets" />
+      <recent name="C:\mystic_melody\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\mystic_melody\src\view" />
+      <recent name="D:\mystic_melody\src\components" />
+      <recent name="D:\mystic_melody\src\components\properties" />
+      <recent name="C:\mystic_melody\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="C" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="C" TARGET_NAME="C" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="C" RUN_TARGET_NAME="C">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\ADMIN\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e89b78f8-e70c-4879-b648-6ef516eb64b2" name="Default Changelist" comment="" />
+      <created>1680692504234</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680692504234</updated>
+      <workItem from="1680692505552" duration="5755000" />
+      <workItem from="1680705265789" duration="939000" />
+      <workItem from="1680707985926" duration="1873000" />
+      <workItem from="1680761184775" duration="5358000" />
+      <workItem from="1680771444558" duration="3386000" />
+      <workItem from="1680782814953" duration="9550000" />
+      <workItem from="1680794085179" duration="3978000" />
+      <workItem from="1680831289041" duration="3663000" />
+      <workItem from="1680847611237" duration="3979000" />
+      <workItem from="1680861370206" duration="670000" />
+      <workItem from="1680862242099" duration="9554000" />
+      <workItem from="1680874327878" duration="555000" />
+      <workItem from="1680874914778" duration="6657000" />
+      <workItem from="1680928725180" duration="12536000" />
+      <workItem from="1680950721420" duration="5528000" />
+      <workItem from="1681003960247" duration="34109000" />
+      <workItem from="1681053433125" duration="7771000" />
+      <workItem from="1681091246348" duration="743000" />
+      <workItem from="1681094095065" duration="4992000" />
+      <workItem from="1681106804673" duration="5962000" />
+      <workItem from="1681126290907" duration="2027000" />
+      <workItem from="1681142762540" duration="1936000" />
+      <workItem from="1681176367062" duration="5642000" />
+      <workItem from="1681194089386" duration="4610000" />
+      <workItem from="1681214552865" duration="20702000" />
+      <workItem from="1681261945975" duration="1993000" />
+      <workItem from="1681271879081" duration="3791000" />
+      <workItem from="1681286884779" duration="3069000" />
+      <workItem from="1681290024444" duration="47000" />
+      <workItem from="1681292038494" duration="25209000" />
+      <workItem from="1681322255469" duration="2483000" />
+      <workItem from="1681349403036" duration="4645000" />
+      <workItem from="1681354746760" duration="6528000" />
+      <workItem from="1681366064346" duration="1185000" />
+      <workItem from="1681369810505" duration="20603000" />
+      <workItem from="1681394910741" duration="22726000" />
+      <workItem from="1681432835571" duration="774000" />
+      <workItem from="1681434228754" duration="3514000" />
+      <workItem from="1681439245542" duration="3618000" />
+      <workItem from="1681444338209" duration="3923000" />
+      <workItem from="1681451407115" duration="20169000" />
+      <workItem from="1681491129663" duration="685000" />
+      <workItem from="1681613168794" duration="2714000" />
+      <workItem from="1681626897307" duration="2997000" />
+      <workItem from="1681631148922" duration="209000" />
+      <workItem from="1681632109080" duration="5779000" />
+      <workItem from="1681662601781" duration="9150000" />
+      <workItem from="1681690014980" duration="5373000" />
+      <workItem from="1681699204270" duration="6342000" />
+      <workItem from="1681713255262" duration="12159000" />
+      <workItem from="1681808647932" duration="14029000" />
+      <workItem from="1681889384581" duration="5886000" />
+      <workItem from="1681896123350" duration="13545000" />
+      <workItem from="1681916585988" duration="581000" />
+      <workItem from="1681917947821" duration="597000" />
+      <workItem from="1681952690541" duration="42376000" />
+      <workItem from="1682039660418" duration="23752000" />
+      <workItem from="1682071701613" duration="4563000" />
+      <workItem from="1682237523338" duration="791000" />
+    </task>
+    <task id="LOCAL-00001" summary="change ui and db">
+      <created>1680874279987</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680874279987</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change ui and db">
+      <created>1680874942529</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680874942529</updated>
+    </task>
+    <task id="LOCAL-00003" summary="change ui and db">
+      <created>1680875156745</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680875156745</updated>
+    </task>
+    <task id="LOCAL-00004" summary="change ui and db">
+      <created>1680934550825</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680934550825</updated>
+    </task>
+    <task id="LOCAL-00005" summary="change ui and db">
+      <created>1680937945511</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680937945511</updated>
+    </task>
+    <task id="LOCAL-00006" summary="change ui">
+      <created>1680956747232</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680956747232</updated>
+    </task>
+    <task id="LOCAL-00007" summary="change ui and db">
+      <created>1680957787053</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680957787053</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change ui and db">
+      <created>1681060309239</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681060309239</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change ui of log in and sign up">
+      <created>1681109778405</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681109778405</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change ui of log in and sign up">
+      <created>1681221238850</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681221238850</updated>
+    </task>
+    <task id="LOCAL-00011" summary="main.c database">
+      <created>1681232472736</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681232472736</updated>
+    </task>
+    <task id="LOCAL-00012" summary="change ui of log in and sign up">
+      <created>1681289965444</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681289965444</updated>
+    </task>
+    <task id="LOCAL-00013" summary="change ui of log in and sign up">
+      <created>1681448068039</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681448068039</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change ui of log in and sign up">
+      <created>1681458501367</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681458501367</updated>
+    </task>
+    <task id="LOCAL-00015" summary="change ui of log in and sign up">
+      <created>1681459534295</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681459534295</updated>
+    </task>
+    <task id="LOCAL-00016" summary="change ui of log in and sign up">
+      <created>1681490207129</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681490207129</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="change ui" />
+    <MESSAGE value="change ui and db" />
+    <MESSAGE value="main.c database" />
+    <MESSAGE value="change ui of log in and sign up" />
+    <option name="LAST_COMMIT_MESSAGE" value="change ui of log in and sign up" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

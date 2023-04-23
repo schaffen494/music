@@ -1,10 +1,9 @@
 //
-// Created by ADMIN on 4/8/2023.
+// Created by ADMIN on 4/17/2023.
 //
 
 #ifndef C_SONGS_H
 #define C_SONGS_H
-#include "src/constant.h"
 #include <gtk/gtk.h>
 #include <sqlite3.h>
 #define ADD_OK 0
@@ -16,13 +15,19 @@ typedef struct {
     gchar *artist;
     gchar *times;
 } Song;
+
 extern int so_bai_hat;
-extern Song songs[PATH_MAX];
-void create_list_song(GtkWidget *list);
-int explorer();
-int my_music_create(GtkWidget *list);
-void play_music();
-void stop_music();
-int my_music_playlist(GtkWidget *list);
+extern Song found[PATH_MAX];
+extern Song my_song[PATH_MAX];
+extern Song explorer[PATH_MAX];
+extern Song song_in_playlist[PATH_MAX];
+extern char curr_playlist_name[PATH_MAX];
+extern char curr_song_name[PATH_MAX],curr_artist_name[PATH_MAX];
+extern int time_curr;
+void create_list_song(char name_song[]);
+void create_list_song_explorer();
+void create_list_song_my_music();
+void create_list_song_in_playlist();
+int find_song(char name_song[]);
 int add_song(char name[],char artist[],char user[]);
 #endif //C_SONGS_H

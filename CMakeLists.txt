@@ -14,10 +14,6 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 add_executable(${PROJECT_NAME}
-        src/main.c
-        src/constant.h
-        src/config/database_config.h
-        src/config/database_config.c src/view/main_view/intro_view.c src/view/main_view/intro_view.h src/view/main_view/signin_view.c src/view/main_view/signin_view.h src/models/users.c src/models/users.h src/view/main_view/signup_view.c src/view/main_view/signup_view.h src/view/main_view/mainboard_view.c src/view/main_view/mainboard_view.h src/view/components/musicbar.c src/view/components/musicbar.h src/view/components/menu.c src/view/components/menu.h src/view/components/searchBar.c src/view/components/searchBar.h src/models/songs.c src/models/songs.h src/models/playlist.c src/models/playlist.h src/models/infor.c src/models/infor.h)
-
+        src/main.c src/config/database_config.c src/config/database_config.h src/view/intro_view.c src/view/intro_view.h src/view/components/menu.c src/view/components/menu.h src/view/components/music_bar.c src/view/components/music_bar.h src/view/components/search_bar.c src/view/components/search_bar.h src/view/sign_in_view.c src/view/sign_in_view.h src/models/users.c src/models/users.h src/control/sign_in_control.c src/control/sign_in_control.h src/view/main_board_view.c src/view/main_board_view.h src/view/sign_up_view.c src/view/sign_up_view.h src/control/sign_up_control.c src/control/sign_up_control.h src/control/main_board_control.c src/control/main_board_control.h src/models/songs.c src/models/songs.h src/models/playlist.c src/models/playlist.h src/view/components/upload.c src/view/components/upload.h "src/view/components/add_playlist.c" "src/view/components/add_playlist.h")
 target_link_libraries(${PROJECT_NAME} ${GTK3_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${SQLITE3_LIBRARY})

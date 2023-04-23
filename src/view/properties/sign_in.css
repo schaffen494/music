@@ -2,17 +2,7 @@
     background-color:#3c3f41;
     border-radius: 10px;
 }
-#button_login {
-    background-color: #424242;
-    color: black;
-}
 
-/* Set background and text color for button_register */
-#button_register {
-    background-color: #4fffff;
-    color: #0a0931;
-    border: 1px solid #0a0931;
-}
 #label_username {
     color: white;
 }

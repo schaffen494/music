@@ -1,19 +1,19 @@
 //
-// Created by ADMIN on 4/13/2023.
+// Created by ADMIN on 4/16/2023.
 //
 
 #include "users.h"
 #include "src/config/database_config.h"
-#include "src/models/infor.h"
-#include <string.h>
-char username[PATH_MAX];
 
-sqlite3* db;
-sqlite3_stmt* stmt;
-char *err_msg = 0;
-int rc;
+#include <string.h>
+char username_current[PATH_MAX];
+
 int check_sign_in(char username[],char password[])
 {
+    sqlite3* db;
+    sqlite3_stmt* stmt;
+    char *err_msg = 0;
+    int rc;
     rc = sqlite3_open(absolute_path, &db);
     if (rc != SQLITE_OK) {
         printf("Can not access to database: %s\n", sqlite3_errmsg(db));
@@ -41,7 +41,7 @@ int check_sign_in(char username[],char password[])
     rc = sqlite3_step(stmt);
 
     if (rc == SQLITE_ROW) {
-        strcpy(id_user_tmp,username);
+        strcpy(username_current,username);
         sqlite3_finalize(stmt);
         sqlite3_close(db);
         return LOGIN_OK;
@@ -57,6 +57,10 @@ int check_sign_in(char username[],char password[])
 
 int add_account(char username[], char password[])
 {
+    sqlite3* db;
+    sqlite3_stmt* stmt;
+    char *err_msg = 0;
+    int rc;
     rc = sqlite3_open(absolute_path, &db);
     if (rc != SQLITE_OK) {
         printf("Can not access to database: %s\n", sqlite3_errmsg(db));
